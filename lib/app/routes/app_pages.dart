@@ -1,11 +1,10 @@
 import 'package:get/get.dart';
-
-import 'package:digital_sampah/app/modules/home/bindings/home_binding.dart';
-import 'package:digital_sampah/app/modules/home/views/home_view.dart';
-import 'package:digital_sampah/app/modules/login/bindings/login_binding.dart';
-import 'package:digital_sampah/app/modules/login/views/login_view.dart';
-import 'package:digital_sampah/app/modules/test/bindings/test_binding.dart';
-import 'package:digital_sampah/app/modules/test/views/test_view.dart';
+import '../modules/home/bindings/home_binding.dart';
+import '../modules/home/views/home_view.dart';
+import '../modules/login/bindings/login_binding.dart';
+import '../modules/login/views/login_view.dart';
+import '../modules/test/bindings/test_binding.dart';
+import '../modules/test/views/test_view.dart';
 
 part 'app_routes.dart';
 
