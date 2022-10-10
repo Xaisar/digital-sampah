@@ -1,4 +1,8 @@
 import 'package:get/get.dart';
+
+import 'package:digital_sampah/app/modules/home_page/bindings/home_page_binding.dart';
+import 'package:digital_sampah/app/modules/home_page/views/home_page_view.dart';
+
 import '../modules/home/bindings/home_binding.dart';
 import '../modules/home/views/home_view.dart';
 import '../modules/login/bindings/login_binding.dart';
@@ -28,6 +32,11 @@ class AppPages {
       name: _Paths.TEST,
       page: () => TestView(),
       binding: TestBinding(),
+    ),
+    GetPage(
+      name: _Paths.HOME_PAGE,
+      page: () => HomePage(),
+      binding: HomePageBinding(),
     ),
   ];
 }
