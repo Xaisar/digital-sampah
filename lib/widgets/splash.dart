@@ -15,20 +15,30 @@ class SplashScreen extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.end,
               mainAxisSize: MainAxisSize.min,
               children: [
-                Text(
-                  'Politeknik Negeri Banyuwangi',
-                  textAlign: TextAlign.center,
+                Padding(
+                  padding: const EdgeInsets.only(bottom: 20),
+                  child: Text(
+                    'Politeknik Negeri Banyuwangi',
+                    textAlign: TextAlign.center,
+                    style: TextStyle(color: Colors.white, fontSize: 16),
+                  ),
                 )
               ],
             ),
             Column(
               mainAxisAlignment: MainAxisAlignment.center,
+              mainAxisSize: MainAxisSize.min,
               children: [
                 SizedBox(
-                  width: Get.width * 0.5,
-                  height: Get.width * 0.5,
-                  child: Image.asset("assets/logo/logo2.png"),
+                  width: Get.width * 0.6,
+                  height: Get.width * 0.6,
+                  child: Image.asset("assets/logo/logo1.png"),
                 ),
+                Text('Bank Sampah Digital',
+                    style: TextStyle(
+                        color: Colors.white,
+                        fontWeight: FontWeight.bold,
+                        fontSize: 24))
               ],
             ),
           ])),

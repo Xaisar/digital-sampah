@@ -17,14 +17,14 @@ class MyApp extends StatelessWidget {
       home: HomePage(),
     );
     return FutureBuilder(
-      future: Future.delayed(Duration(seconds: 3)),
+      future: Future.delayed(Duration(seconds: 5)),
       builder: (context, snapshot) {
         if (snapshot.connectionState == ConnectionState.waiting) {
           return SplashScreen();
         } else {
           return GetMaterialApp(
             debugShowCheckedModeBanner: false,
-            title: "Application",
+            title: "Bank Sampah Digital",
             initialRoute: Routes.LOGIN,
             getPages: AppPages.routes,
           );
