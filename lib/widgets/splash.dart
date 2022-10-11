@@ -20,7 +20,10 @@ class SplashScreen extends StatelessWidget {
                   child: Text(
                     'Politeknik Negeri Banyuwangi',
                     textAlign: TextAlign.center,
-                    style: TextStyle(color: Colors.white, fontSize: 16),
+                    style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 20,
+                        fontWeight: FontWeight.bold),
                   ),
                 )
               ],
@@ -30,15 +33,15 @@ class SplashScreen extends StatelessWidget {
               mainAxisSize: MainAxisSize.min,
               children: [
                 SizedBox(
-                  width: Get.width * 0.6,
-                  height: Get.width * 0.6,
+                  width: Get.width * 0.7,
+                  height: Get.width * 0.7,
                   child: Image.asset("assets/logo/logo1.png"),
                 ),
-                Text('Bank Sampah Digital',
-                    style: TextStyle(
-                        color: Colors.white,
-                        fontWeight: FontWeight.bold,
-                        fontSize: 24))
+                // Text('Bank Sampah Digital',
+                //     style: TextStyle(
+                //         color: Colors.white,
+                //         fontWeight: FontWeight.bold,
+                //         fontSize: 24))
               ],
             ),
           ])),
