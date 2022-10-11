@@ -2,14 +2,12 @@ import 'package:digital_sampah/component/card_title.dart';
 import 'package:digital_sampah/component/my_button.dart';
 import 'package:digital_sampah/component/my_card.dart';
 import 'package:digital_sampah/component/my_listtile.dart';
-import 'package:digital_sampah/models/news.dart';
+import 'package:digital_sampah/component/news.dart';
 import 'package:digital_sampah/theme.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
-
 import 'package:get/get.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
-
 import '../controllers/home_page_controller.dart';
 
 class HomePage extends StatefulWidget {
@@ -54,7 +52,7 @@ class _HomePageState extends State<HomePage> {
                   ElevatedButton(
                     style: ElevatedButton.styleFrom(
                       padding: EdgeInsets.all(4),
-                      primary: Color(0xFFEBF9EE),
+                      primary: Colors.grey[200],
                       shape: new CircleBorder(),
                     ),
                     onPressed: () {},
@@ -108,13 +106,13 @@ class _HomePageState extends State<HomePage> {
                   ),
                   //paybutton
                   MyButton(
-                    iconImagePath: "assets/icons/credit-card.png",
+                    iconImagePath: "assets/icons/riwayat.png",
                     butoonText: "Riwayat",
                   ),
                   //bills button
                   MyButton(
-                    iconImagePath: "assets/icons/bill.png",
-                    butoonText: "PLN",
+                    iconImagePath: "assets/icons/listrik.png",
+                    butoonText: "Listrik",
                   ),
                 ],
               ),
@@ -128,17 +126,17 @@ class _HomePageState extends State<HomePage> {
                 children: [
                   //sendbutton
                   MyButton(
-                    iconImagePath: "assets/icons/send.png",
+                    iconImagePath: "assets/icons/air.png",
                     butoonText: "Air",
                   ),
                   //paybutton
                   MyButton(
-                    iconImagePath: "assets/icons/credit-card.png",
+                    iconImagePath: "assets/icons/pbb.png",
                     butoonText: "PBB",
                   ),
                   //bills button
                   MyButton(
-                    iconImagePath: "assets/icons/bill.png",
+                    iconImagePath: "assets/icons/bantuan.png",
                     butoonText: "Bantuan",
                   ),
                 ],
@@ -146,24 +144,36 @@ class _HomePageState extends State<HomePage> {
             ),
             SizedBox(height: 15),
             //column -> stats + transaction
+
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 25.0),
-              child: Column(
-                children: [
-                  //statistics
-                  MyListTile(
-                    iconImagePath: "assets/icons/statistics.png",
-                    tileName: "Statistics",
-                    tileSubName: "Payments and Icome",
-                  ),
-                  //transaction
-                  SizedBox(height: 10),
-                  MyListTile(
-                    iconImagePath: "assets/icons/mobile-transfer.png",
-                    tileName: "Transactions",
-                    tileSubName: "Transaction History",
-                  ),
-                ],
+              child: Container(
+                // width: 300,
+                padding: EdgeInsets.all(10),
+                decoration: BoxDecoration(
+                  color: Colors.white,
+                  borderRadius: BorderRadius.circular(16),
+                ),
+                child: Column(
+                  children: [
+                    //statistics
+                    MyListTile(
+                      iconImagePath: "assets/icons/statistics.png",
+                      tileName: "Statistics",
+                      tileSubName: "Payments and Icome",
+                    ),
+                    //transaction
+                    // SizedBox(height: 10),
+                    Divider(
+                        color: Colors.grey[700],
+                        ),
+                    MyListTile(
+                      iconImagePath: "assets/icons/mobile-transfer.png",
+                      tileName: "Transactions",
+                      tileSubName: "Transaction History",
+                    ),
+                  ],
+                ),
               ),
             ),
 
@@ -178,23 +188,23 @@ class _HomePageState extends State<HomePage> {
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Image.asset(
-                          'assets/images/gopaylater.png',
-                          height: 14,
+                        // Image.asset(
+                        //   'assets/images/event.png',
+                        //   height: 60,
+                        // ),
+                        const SizedBox(
+                          height: 8,
+                        ),
+                        Text(
+                          'Reuse Reduce Recycle!',
+                          style: bold16.copyWith(color: dark1),
                         ),
                         const SizedBox(
                           height: 8,
                         ),
                         Text(
-                          'Lebih hemat pake GoPayLater 🤩',
-                          // style: bold16.copyWith(color: dark1),
-                        ),
-                        const SizedBox(
-                          height: 8,
-                        ),
-                        Text(
-                          'Yuk, belanja di Tokopedia pake GoPay Later dan nikmatin cashback-nya~',
-                          // style: regular14.copyWith(color: dark2),
+                          'Yuk, Jaga Lingkungan Kita Dengan Mengumpulkan Sampah Menjadi Pundi Rupiah dan Ikuti Event Yang Diselenggarakan Oleh Desa Untuk Warga Tercinta!',
+                          style: regular14.copyWith(color: dark2),
                         )
                       ],
                     ),
@@ -204,40 +214,23 @@ class _HomePageState extends State<HomePage> {
                     height: 24,
                   ),
 
-                  //News
-                  // ...News.map((item) => Padding(
-                  //         padding: const EdgeInsets.only(bottom: 24, left: 16, right: 16),
-                  //         child: Container(
-                  //           clipBehavior: Clip.hardEdge,
-                  //           decoration: BoxDecoration(
-                  //               borderRadius: BorderRadius.circular(15),
-                  //               border: Border.all(color: dark4)),
-                  //           child: Column(
-                  //             children: [
-                  //               Image.asset('assets/images/${item.image}'),
-                  //               Padding(
-                  //                 padding: const EdgeInsets.all(24),
-                  //                 child: Column(
-                  //                   crossAxisAlignment: CrossAxisAlignment.start,
-                  //                   children: [
-                  //                     Text(
-                  //                       item.title,
-                  //                       style: bold16.copyWith(color: dark1),
-                  //                     ),
-                  //                     const SizedBox(
-                  //                       height: 8,
-                  //                     ),
-                  //                     Text(
-                  //                       item.description,
-                  //                       style: regular14.copyWith(color: dark2),
-                  //                     ),
-                  //                   ],
-                  //                 ),
-                  //               )
-                  //             ],
-                  //           ),
-                  //         ),
-                  //       ),),
+              Container(
+                child: Column(
+                  children: [
+                    //statistics
+                    News(IconImagePath: "assets/images/1.png",
+                     Judul: "Sosialisisai Pemilihan Sampah!",
+                      TitleText: "sampah merupakan masalah yang umum dihadapi oleh masyarakat pada umumnya. Sampah yang tidak terkelola dengan baik akan menjadi tempat berkembangbiaknya kuman penyakit serta vektor penyakit."),
+                    //transaction
+                    SizedBox( height: 15),
+                       News(IconImagePath: "assets/images/1.png",
+                     Judul: "Sosialisisai Pemilihan Sampah!",
+                      TitleText: "sampah merupakan masalah yang umum dihadapi oleh masyarakat pada umumnya. Sampah yang tidak terkelola dengan baik akan menjadi tempat berkembangbiaknya kuman penyakit serta vektor penyakit."),
+                    
+                  ],
+                ),
+              ),
+                  // ),
                 ],
               ),
             ),

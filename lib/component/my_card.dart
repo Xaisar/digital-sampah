@@ -39,12 +39,12 @@ class MyCards extends StatelessWidget {
                   ),
                 ),
                 Image.asset(
-                  "assets/icons/visa.png",
-                  height: 60,
+                  "assets/icons/logo.png",
+                  height: 35,
                 ),
               ],
             ),
-             Text(
+            Text(
               "\RP " + balance.toString(),
               style: TextStyle(
                 color: Colors.white,
@@ -52,7 +52,6 @@ class MyCards extends StatelessWidget {
                 fontWeight: FontWeight.bold,
               ),
             ),
-            
             SizedBox(height: 30),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,

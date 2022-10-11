@@ -30,9 +30,7 @@ class MyListTile extends StatelessWidget {
                               ),
                               child: Image.asset(iconImagePath),
                             ),
-
                             SizedBox(width: 15),
-
                             Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
@@ -44,6 +42,8 @@ class MyListTile extends StatelessWidget {
                                   ),
                                 ),
                                 SizedBox(height: 5),
+                              
+                                    
                                 Text(
                                   tileSubName,
                                   style: TextStyle(
@@ -61,7 +61,9 @@ class MyListTile extends StatelessWidget {
                             primary: Colors.grey[200],
                             shape: new CircleBorder(),
                           ),
-                          onPressed: () {},
+                          onPressed: () {
+                            
+                          },
                           child: Icon(
                             Icons.arrow_forward_ios,
                             color: Colors.black,
