@@ -165,8 +165,8 @@ class _HomePageState extends State<HomePage> {
                     //transaction
                     // SizedBox(height: 10),
                     Divider(
-                        color: Colors.grey[700],
-                        ),
+                      color: Colors.grey[700],
+                    ),
                     MyListTile(
                       iconImagePath: "assets/icons/mobile-transfer.png",
                       tileName: "Transactions",
@@ -214,22 +214,25 @@ class _HomePageState extends State<HomePage> {
                     height: 24,
                   ),
 
-              Container(
-                child: Column(
-                  children: [
-                    //statistics
-                    News(IconImagePath: "assets/images/1.png",
-                     Judul: "Sosialisisai Pemilihan Sampah!",
-                      TitleText: "sampah merupakan masalah yang umum dihadapi oleh masyarakat pada umumnya. Sampah yang tidak terkelola dengan baik akan menjadi tempat berkembangbiaknya kuman penyakit serta vektor penyakit."),
-                    //transaction
-                    SizedBox( height: 15),
-                       News(IconImagePath: "assets/images/1.png",
-                     Judul: "Sosialisisai Pemilihan Sampah!",
-                      TitleText: "sampah merupakan masalah yang umum dihadapi oleh masyarakat pada umumnya. Sampah yang tidak terkelola dengan baik akan menjadi tempat berkembangbiaknya kuman penyakit serta vektor penyakit."),
-                    
-                  ],
-                ),
-              ),
+                  Container(
+                    child: Column(
+                      children: [
+                        //statistics
+                        News(
+                            IconImagePath: "assets/images/1.png",
+                            Judul: "Sosialisisai Pemilihan Sampah!",
+                            TitleText:
+                                "sampah merupakan masalah yang umum dihadapi oleh masyarakat pada umumnya. Sampah yang tidak terkelola dengan baik akan menjadi tempat berkembangbiaknya kuman penyakit serta vektor penyakit."),
+                        //transaction
+                        SizedBox(height: 15),
+                        News(
+                            IconImagePath: "assets/images/1.png",
+                            Judul: "Sosialisisai Pemilihan Sampah!",
+                            TitleText:
+                                "sampah merupakan masalah yang umum dihadapi oleh masyarakat pada umumnya. Sampah yang tidak terkelola dengan baik akan menjadi tempat berkembangbiaknya kuman penyakit serta vektor penyakit."),
+                      ],
+                    ),
+                  ),
                   // ),
                 ],
               ),
