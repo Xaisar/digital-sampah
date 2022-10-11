@@ -3,10 +3,11 @@ import 'package:digital_sampah/app/routes/app_pages.dart';
 import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
-
+import '../controllers/password_controller.dart';
 import '../controllers/login_controller.dart';
 
 class LoginView extends GetView<LoginController> {
+  final passwordC = Get.put(PasswordController());
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -27,7 +28,7 @@ class LoginView extends GetView<LoginController> {
           child: Container(
             decoration: const BoxDecoration(
               boxShadow: [BoxShadow(color: Colors.white, blurRadius: 5)],
-              color: Colors.white,
+              color: Color(0xFFE9E9E9),
               borderRadius:
                   BorderRadiusDirectional.only(topStart: Radius.circular(50)),
             ),
@@ -49,7 +50,7 @@ class LoginView extends GetView<LoginController> {
                   ),
                   Container(
                     alignment: Alignment.topCenter,
-                    margin: const EdgeInsets.only(top: 40, left: 20, right: 20),
+                    margin: const EdgeInsets.only(top: 40, left: 30, right: 30),
                     // color: Colors.red,
                     child: Column(children: [
                       Container(
@@ -69,13 +70,26 @@ class LoginView extends GetView<LoginController> {
                                       style: TextStyle(fontSize: 18),
                                     ),
                                   ),
-                                  const TextField(
-                                    decoration: InputDecoration(
-                                      border: OutlineInputBorder(
-                                          borderRadius: BorderRadius.all(
-                                              Radius.circular(30))),
-                                      hintText: 'Input Username',
-                                      focusColor: Colors.grey,
+                                  Container(
+                                    decoration: BoxDecoration(
+                                      color: Colors.white,
+                                      boxShadow: [
+                                        BoxShadow(
+                                            offset: Offset(0.0, 0.5),
+                                            color: Colors.black,
+                                            blurStyle: BlurStyle.outer)
+                                      ],
+                                      borderRadius:
+                                          BorderRadius.all(Radius.circular(20)),
+                                    ),
+                                    child: const TextField(
+                                      decoration: InputDecoration(
+                                        border: OutlineInputBorder(
+                                            borderRadius: BorderRadius.all(
+                                                Radius.circular(20))),
+                                        hintText: 'Input Username',
+                                        focusColor: Colors.white,
+                                      ),
                                     ),
                                   ),
                                 ])),
@@ -91,14 +105,49 @@ class LoginView extends GetView<LoginController> {
                                       style: TextStyle(fontSize: 18),
                                     ),
                                   ),
-                                  const TextField(
-                                    decoration: InputDecoration(
-                                      border: OutlineInputBorder(
-                                          borderRadius: BorderRadius.all(
-                                              Radius.circular(30))),
-                                      hintText: 'Input Password',
-                                      focusColor: Colors.grey,
+                                  Container(
+                                    decoration: BoxDecoration(
+                                      color: Colors.white,
+                                      boxShadow: [
+                                        BoxShadow(
+                                            offset: Offset(0.0, 0.5),
+                                            color: Colors.black,
+                                            blurStyle: BlurStyle.outer)
+                                      ],
+                                      borderRadius:
+                                          BorderRadius.all(Radius.circular(20)),
                                     ),
+                                    child: Obx(() => TextField(
+                                          obscureText: passwordC
+                                              .password.passwordverify.value,
+                                          autofocus: false,
+                                          keyboardType: TextInputType.text,
+                                          decoration: InputDecoration(
+                                              border: OutlineInputBorder(
+                                                  borderRadius:
+                                                      BorderRadius.all(
+                                                          Radius.circular(20))),
+                                              hintText: 'Input Password',
+                                              suffixIcon: GestureDetector(
+                                                  onTap: () {
+                                                    passwordC
+                                                        .togglePasswordVisibility();
+                                                  },
+                                                  child: Icon(
+                                                    passwordC
+                                                            .password
+                                                            .passwordverify
+                                                            .value
+                                                        ? Icons.visibility_off
+                                                        : Icons.visibility,
+                                                    color: passwordC
+                                                            .password
+                                                            .passwordverify
+                                                            .value
+                                                        ? Colors.grey
+                                                        : Colors.blue,
+                                                  ))),
+                                        )),
                                   ),
                                   Container(
                                     alignment: Alignment.centerRight,
@@ -110,9 +159,11 @@ class LoginView extends GetView<LoginController> {
                                         ),
                                         onPressed: () => Get.offAllNamed(
                                             Routes.GANTIPASSWORD),
-                                        child: const Text(
+                                        child: Text(
                                           'Lupa Password?',
                                           style: TextStyle(
+                                              // color: Colors.green[700],
+                                              color: Colors.black,
                                               decoration:
                                                   TextDecoration.underline),
                                         )),
@@ -130,7 +181,7 @@ class LoginView extends GetView<LoginController> {
                                 onPressed: () => Get.offAllNamed(Routes.HOME),
                                 child: const Text(
                                   'Login',
-                                  style: TextStyle(fontSize: 18),
+                                  style: TextStyle(fontSize: 20),
                                 ),
                               ),
                             ),
@@ -148,7 +199,18 @@ class LoginView extends GetView<LoginController> {
                 children: [
                   Container(
                       margin: EdgeInsets.only(bottom: 50),
-                      child: Text('Butuh Bantuan? Hubungi Kami')),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Text('Butuh Bantuan?'),
+                          TextButton(
+                              onPressed: () {},
+                              child: Text(
+                                'Hubungi Kami',
+                                style: TextStyle(color: Colors.yellow[800]),
+                              ))
+                        ],
+                      )),
                 ],
               )
             ]),

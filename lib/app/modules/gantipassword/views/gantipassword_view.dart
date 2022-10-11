@@ -15,7 +15,7 @@ class GantipasswordView extends GetView<GantipasswordController> {
           fit: StackFit.expand,
           children: <Widget>[
             Image.asset(
-              'assets/images/background.png',
+              'assets/images/backgroundlupapassword.png',
               // width: Get.width * 1.5,
               fit: BoxFit.fill,
             ),
@@ -23,7 +23,7 @@ class GantipasswordView extends GetView<GantipasswordController> {
               leading: ElevatedButton(
                 onPressed: () => Get.offAllNamed(Routes.LOGIN),
                 child: Image.asset(
-                  'assets/icons/profil.png',
+                  '',
                 ),
               ),
               backgroundColor: Colors.transparent,

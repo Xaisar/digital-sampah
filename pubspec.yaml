@@ -22,8 +22,8 @@ flutter:
   uses-material-design: true
   assets:
     - assets/logo/logo1.png
-    - assets/images/background.png
-    - assets/icons/profil.png
+    - assets/images/backgroundregister.png
+    - assets/images/backgroundlupapassword.png
 
 
 # fonts:

@@ -9,6 +9,7 @@ abstract class Routes {
   static const TEST = _Paths.TEST;
   static const HOME_PAGE = _Paths.HOME_PAGE;
   static const GANTIPASSWORD = _Paths.GANTIPASSWORD;
+  static const HOME_PETUGAS = _Paths.HOME_PETUGAS;
 }
 
 abstract class _Paths {
@@ -17,4 +18,5 @@ abstract class _Paths {
   static const TEST = '/test';
   static const HOME_PAGE = '/home-page';
   static const GANTIPASSWORD = '/gantipassword';
+  static const HOME_PETUGAS = '/home-petugas';
 }

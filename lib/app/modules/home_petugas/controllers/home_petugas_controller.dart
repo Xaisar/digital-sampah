@@ -1,8 +1,7 @@
 import 'package:get/get.dart';
 
-class GantipasswordController extends GetxController {
-  // ignore: todo
-  //TODO: Implement GantipasswordController
+class HomePetugasController extends GetxController {
+  //TODO: Implement HomePetugasController
 
   final count = 0.obs;
   @override

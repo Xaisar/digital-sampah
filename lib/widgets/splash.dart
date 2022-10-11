@@ -13,12 +13,24 @@ class SplashScreen extends StatelessWidget {
           body: Stack(fit: StackFit.expand, children: <Widget>[
             Column(
               mainAxisAlignment: MainAxisAlignment.end,
-              mainAxisSize: MainAxisSize.min,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              // mainAxisSize: MainAxisSize.min,
               children: [
                 Padding(
-                  padding: const EdgeInsets.only(bottom: 20),
+                  padding: const EdgeInsets.only(bottom: 10),
                   child: Text(
-                    'Politeknik Negeri Banyuwangi',
+                    'Politeknik Negeri',
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 20,
+                        fontWeight: FontWeight.bold),
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(bottom: 25),
+                  child: Text(
+                    'Banyuwangi',
                     textAlign: TextAlign.center,
                     style: TextStyle(
                         color: Colors.white,
@@ -33,8 +45,8 @@ class SplashScreen extends StatelessWidget {
               mainAxisSize: MainAxisSize.min,
               children: [
                 SizedBox(
-                  width: Get.width * 0.7,
-                  height: Get.width * 0.7,
+                  width: Get.width * 0.6,
+                  height: Get.width * 0.6,
                   child: Image.asset("assets/logo/logo1.png"),
                 ),
                 // Text('Bank Sampah Digital',
