@@ -11,12 +11,11 @@ class SuccesChangePassword extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-          backgroundColor: Colors.green[100],
+          backgroundColor: Colors.grey[200],
           body: Stack(fit: StackFit.expand, children: <Widget>[
             Column(
               mainAxisAlignment: MainAxisAlignment.end,
               crossAxisAlignment: CrossAxisAlignment.center,
-              // mainAxisSize: MainAxisSize.min,
               children: [
                 Container(
                   margin: EdgeInsets.only(bottom: 40),
@@ -42,15 +41,9 @@ class SuccesChangePassword extends StatelessWidget {
               children: [
                 SizedBox(
                   width: Get.width * 0.9,
-                  height: Get.width * 0.9,
                   //vector succes
-                  child: Image.asset(""),
+                  child: Image.asset("assets/images/ilustrasiSucces.png"),
                 ),
-                // Text('Bank Sampah Digital',
-                //     style: TextStyle(
-                //         color: Colors.white,
-                //         fontWeight: FontWeight.bold,
-                //         fontSize: 24))
               ],
             ),
           ])),
