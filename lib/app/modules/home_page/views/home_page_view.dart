@@ -28,40 +28,8 @@ class _HomePageState extends State<HomePage> {
         child: Column(
           children: [
             //appbarr
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 25.0),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Row(
-                    children: [
-                      Text(
-                        "My",
-                        style: TextStyle(
-                          fontSize: 28,
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                      Text(
-                        "Cards",
-                        style: TextStyle(fontSize: 28),
-                      ),
-                    ],
-                  ),
-                  //plus butto
-                  ElevatedButton(
-                    style: ElevatedButton.styleFrom(
-                      padding: EdgeInsets.all(4),
-                      primary: Colors.grey[200],
-                      shape: new CircleBorder(),
-                    ),
-                    onPressed: () {},
-                    child: Icon(Icons.logout),
-                  ),
-                ],
-              ),
-            ),
-            SizedBox(height: 25),
+            Container(
+                margin: EdgeInsets.only(top: 30), child: SizedBox(height: 30)),
             //cards
             Container(
               height: 200,
@@ -102,7 +70,7 @@ class _HomePageState extends State<HomePage> {
                   //sendbutton
                   MyButton(
                     iconImagePath: "assets/icons/send.png",
-                    butoonText: "Rupiah",
+                    butoonText: "Harga Sampah",
                   ),
                   //paybutton
                   MyButton(

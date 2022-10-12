@@ -13,10 +13,10 @@ class MyApp extends StatelessWidget {
   const MyApp({super.key});
   @override
   Widget build(BuildContext context) {
-    return GetMaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: PembayaranListrik(),//HomePage(),
-    );
+    // return GetMaterialApp(
+    //   debugShowCheckedModeBanner: false,
+    //   home: PembayaranListrik(),//HomePage(),
+    // );
     return FutureBuilder(
       future: Future.delayed(Duration(seconds: 5)),
       builder: (context, snapshot) {
