@@ -17,9 +17,9 @@ class LoginView extends GetView<LoginController> {
         logo(),
         Expanded(
           child: Container(
-            decoration: const BoxDecoration(
+            decoration: BoxDecoration(
               boxShadow: [BoxShadow(color: Colors.white, blurRadius: 5)],
-              color: Color(0xFFE9E9E9),
+              color: Colors.grey[100],
               borderRadius:
                   BorderRadiusDirectional.only(topStart: Radius.circular(50)),
             ),

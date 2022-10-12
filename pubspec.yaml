@@ -21,9 +21,10 @@ dev_dependencies:
 flutter:
   uses-material-design: true
   assets:
-    - assets/logo/logo1.png
-    - assets/images/background.png
-    - assets/icons/profil.png
+    - assets/logo/logo.png
+    - assets/images/backgroundRegister.png
+    - assets/images/backgroundLupaPassword.png
+    - assets/images/ilustrasiSucces.png
     - assets/icons/
     - assets/images/
     - assets/logo/
