@@ -8,7 +8,8 @@ abstract class Routes {
   static const LOGIN = _Paths.LOGIN;
   static const TEST = _Paths.TEST;
   static const HOME_PAGE = _Paths.HOME_PAGE;
-  static const GANTIPASSWORD = _Paths.GANTIPASSWORD;
+  static const HOME_PETUGAS = _Paths.HOME_PETUGAS;
+  static const LUPA_PASSWORD = _Paths.LUPA_PASSWORD;
 }
 
 abstract class _Paths {
@@ -16,5 +17,6 @@ abstract class _Paths {
   static const LOGIN = '/login';
   static const TEST = '/test';
   static const HOME_PAGE = '/home-page';
-  static const GANTIPASSWORD = '/gantipassword';
+  static const HOME_PETUGAS = '/home-petugas';
+  static const LUPA_PASSWORD = '/lupa-password';
 }
