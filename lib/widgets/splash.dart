@@ -47,7 +47,7 @@ class SplashScreen extends StatelessWidget {
                 SizedBox(
                   width: Get.width * 0.6,
                   height: Get.width * 0.6,
-                  child: Image.asset("assets/logo/logo1.png"),
+                  child: Image.asset("assets/logo/logo.png"),
                 ),
                 // Text('Bank Sampah Digital',
                 //     style: TextStyle(

@@ -1,7 +1,7 @@
 import 'package:get/get.dart';
 
-class FormpassworbaruController extends GetxController {
-  //TODO: Implement FormpassworbaruController
+class LupaPasswordController extends GetxController {
+  //TODO: Implement LupaPasswordController
 
   final count = 0.obs;
   @override
