@@ -23,8 +23,10 @@ flutter:
   assets:
     - assets/logo/logo1.png
     - assets/images/background.png
-    - assets/icons/profil.png
-
+    # - assets/icons/profil.png
+    - assets/icons/
+    - assets/images/
+    - assets/logo/
 
 fonts:
   - family: SF-Pro-Display
