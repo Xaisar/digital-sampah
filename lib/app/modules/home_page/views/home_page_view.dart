@@ -69,24 +69,23 @@ class _HomePageState extends State<HomePage> {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  
                   //sendbutton
                   MyButton(
                     iconImagePath: "assets/icons/send.png",
                     butoonText: "Harga Sampah",
-                    route: Routes.HARGA_SAMPAH,
                   ),
                   //paybutton
                   MyButton(
                     iconImagePath: "assets/icons/riwayat.png",
                     butoonText: "Riwayat",
-                 route: Routes.RIWAYAT,
                   ),
                   //bills button
                   MyButton(
                     iconImagePath: "assets/icons/listrik.png",
                     butoonText: "Listrik",
-                     onPressed: (){Get.to(() => PemayaranView()); },
+                    onPressed: () {
+                      Get.to(() => PemayaranView());
+                    },
                   ),
                 ],
               ),
@@ -102,19 +101,22 @@ class _HomePageState extends State<HomePage> {
                   MyButton(
                     iconImagePath: "assets/icons/air.png",
                     butoonText: "Air",
-                     onPressed: (){Get.to(() => PemayaranView()); },
+                    onPressed: () {
+                      Get.to(() => PemayaranView());
+                    },
                   ),
                   //paybutton
                   MyButton(
                     iconImagePath: "assets/icons/pbb.png",
                     butoonText: "PBB",
-                     onPressed: (){Get.to(() => PemayaranView()); },
+                    onPressed: () {
+                      Get.to(() => PemayaranView());
+                    },
                   ),
                   //bills button
                   MyButton(
                     iconImagePath: "assets/icons/bantuan.png",
                     butoonText: "Bantuan",
-                     route: Routes.BANTUAN,
                   ),
                 ],
               ),
