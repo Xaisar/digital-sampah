@@ -10,6 +10,8 @@ abstract class Routes {
   static const HOME_PAGE = _Paths.HOME_PAGE;
   static const HOME_PETUGAS = _Paths.HOME_PETUGAS;
   static const LUPA_PASSWORD = _Paths.LUPA_PASSWORD;
+  static const PEMAYARAN = _Paths.PEMAYARAN;
+  static const PAYMENTPAGE = _Paths.PAYMENTPAGE;
 }
 
 abstract class _Paths {
@@ -19,4 +21,6 @@ abstract class _Paths {
   static const HOME_PAGE = '/home-page';
   static const HOME_PETUGAS = '/home-petugas';
   static const LUPA_PASSWORD = '/lupa-password';
+  static const PEMAYARAN = '/pemayaran';
+  static const PAYMENTPAGE = '/paymentpage';
 }

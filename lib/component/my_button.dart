@@ -3,11 +3,13 @@ import 'package:flutter/material.dart';
 class MyButton extends StatelessWidget {
   final String iconImagePath;
   final String butoonText;
+  final Function()? onPressed;
 
   const MyButton({
     super.key,
     required this.iconImagePath,
     required this.butoonText,
+    this.onPressed,
   });
 
   @override
@@ -23,7 +25,7 @@ class MyButton extends StatelessWidget {
               borderRadius: BorderRadius.circular(20),
             ),
           ),
-          onPressed: () {},
+          onPressed: onPressed,
           child: Container(
             height: 60,
             padding: EdgeInsets.all(10),

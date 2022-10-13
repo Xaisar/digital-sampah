@@ -1,3 +1,4 @@
+import 'package:digital_sampah/app/modules/pemayaran/views/pemayaran_view.dart';
 import 'package:digital_sampah/component/card_title.dart';
 import 'package:digital_sampah/component/my_button.dart';
 import 'package:digital_sampah/component/my_card.dart';
@@ -73,7 +74,7 @@ class _HomePageState extends State<HomePage> {
                     balance: 258543,
                     cardNumber: 3213125205680006,
                     Dawis1: "Dawis001",
-                    color: Colors.deepPurple[300],
+                    // color: Colors.deepPurple[300],
                   ),
                   MyCard(
                       color1: Colors.green[400],
@@ -99,20 +100,24 @@ class _HomePageState extends State<HomePage> {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
+                  
                   //sendbutton
                   MyButton(
                     iconImagePath: "assets/icons/send.png",
-                    butoonText: "Rupiah",
+                    butoonText: "Harga Sampah  ",
+                    onPressed: (){},
                   ),
                   //paybutton
                   MyButton(
                     iconImagePath: "assets/icons/riwayat.png",
                     butoonText: "Riwayat",
+                    onPressed: (){},
                   ),
                   //bills button
                   MyButton(
                     iconImagePath: "assets/icons/listrik.png",
                     butoonText: "Listrik",
+                    onPressed: (){Get.to(() => PemayaranView()); },
                   ),
                 ],
               ),
@@ -128,16 +133,19 @@ class _HomePageState extends State<HomePage> {
                   MyButton(
                     iconImagePath: "assets/icons/air.png",
                     butoonText: "Air",
+                    onPressed: (){Get.to(() => PemayaranView()); },
                   ),
                   //paybutton
                   MyButton(
                     iconImagePath: "assets/icons/pbb.png",
                     butoonText: "PBB",
+                    onPressed: (){Get.to(() => PemayaranView()); },
                   ),
                   //bills button
                   MyButton(
                     iconImagePath: "assets/icons/bantuan.png",
                     butoonText: "Bantuan",
+                    onPressed: (){},
                   ),
                 ],
               ),

@@ -1,5 +1,10 @@
 import 'package:get/get.dart';
 
+import 'package:digital_sampah/app/modules/paymentpage/bindings/paymentpage_binding.dart';
+import 'package:digital_sampah/app/modules/paymentpage/views/paymentpage_view.dart';
+import 'package:digital_sampah/app/modules/pemayaran/bindings/pemayaran_binding.dart';
+import 'package:digital_sampah/app/modules/pemayaran/views/pemayaran_view.dart';
+
 import '../modules/home/bindings/home_binding.dart';
 import '../modules/home/views/home_view.dart';
 import '../modules/home_page/bindings/home_page_binding.dart';
@@ -50,6 +55,16 @@ class AppPages {
       name: _Paths.LUPA_PASSWORD,
       page: () => const LupaPasswordView(),
       binding: LupaPasswordBinding(),
+    ),
+    GetPage(
+      name: _Paths.PEMAYARAN,
+      page: () => PemayaranView(),
+      binding: PemayaranBinding(),
+    ),
+    GetPage(
+      name: _Paths.PAYMENTPAGE,
+      page: () => PaymentpageView(),
+      binding: PaymentpageBinding(),
     ),
   ];
 }

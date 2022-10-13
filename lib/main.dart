@@ -1,5 +1,5 @@
 import 'package:digital_sampah/app/modules/home_page/views/home_page_view.dart';
-import 'package:digital_sampah/pembayaran/pembayran_pln.dart';
+import 'package:digital_sampah/app/modules/pemayaran/views/pemayaran_view.dart';
 import 'package:digital_sampah/widgets/splash.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
-      home: PembayaranListrik(),//HomePage(),
+      home: PemayaranView(),//HomePage(), 
     );
     return FutureBuilder(
       future: Future.delayed(Duration(seconds: 5)),

@@ -4,14 +4,14 @@ class MyCards extends StatelessWidget {
   final double balance;
   final int cardNumber;
   final String Dawis1;
-  final color;
+  // final color;
 
   const MyCards({
     super.key,
     required this.balance,
     required this.cardNumber,
     required this.Dawis1,
-    required this.color,
+    // required this.color,
   });
 
   @override
@@ -22,7 +22,14 @@ class MyCards extends StatelessWidget {
         width: 300,
         padding: EdgeInsets.all(20),
         decoration: BoxDecoration(
-          color: color,
+          // color: color,
+          gradient: LinearGradient(
+                          colors: [
+                            Color(0xff1DBA3F),
+                            Color(0xff025113),
+
+                          ],
+                        ),
           borderRadius: BorderRadius.circular(16),
         ),
         child: Column(
