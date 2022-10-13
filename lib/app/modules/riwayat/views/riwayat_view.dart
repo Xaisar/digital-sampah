@@ -11,7 +11,7 @@ class RiwayatView extends GetView<RiwayatController> {
     return Scaffold(
       appBar: AppBar(
         title: const Text('RiwayatView'),
-        centerTitle: true,
+        centerTitle: false,
       ),
       body: Center(
         child: Text(
