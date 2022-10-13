@@ -24,9 +24,9 @@ class MyCards extends StatelessWidget {
         decoration: BoxDecoration(
           // color: color,
           gradient: LinearGradient(
-                          colors: [
-                            Color(0xff1DBA3F),
-                            Color(0xff025113),
+               colors: [
+                 Color(0xff1DBA3F),
+                 Color(0xff025113),
 
                           ],
                         ),

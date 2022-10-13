@@ -9,7 +9,7 @@ class MyCard extends StatelessWidget {
   final String Alamat;
   final String TitleHariPenjemputan;
   final String TanggalJoin;
-  final color1;
+  // final color1;
 
   const MyCard({
     super.key,
@@ -19,7 +19,7 @@ class MyCard extends StatelessWidget {
     required this.Alamat,
     required this.TitleHariPenjemputan,
     required this.TanggalJoin,
-    required this.color1,
+    // required this.color1,
 
   });
 
@@ -32,7 +32,13 @@ class MyCard extends StatelessWidget {
         width: 300,
         padding: EdgeInsets.all(20),
         decoration: BoxDecoration(
-          color: color1,
+          gradient: LinearGradient(
+                          colors: [
+                            Color(0xff1DBA3F),
+                            Color(0xff025113),
+
+                          ],
+                        ),
           borderRadius: BorderRadius.circular(16),
         ),
         child: Column(
