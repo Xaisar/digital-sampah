@@ -1,4 +1,7 @@
+import 'package:digital_sampah/app/models/account.dart';
+import 'package:digital_sampah/app/models/controller/account_contoller.dart';
 import 'package:digital_sampah/app/models/controller/hidepassword_controller.dart';
+import 'package:digital_sampah/app/modules/home_page/views/home_page_view.dart';
 import 'package:digital_sampah/app/routes/app_pages.dart';
 import 'package:flutter/material.dart';
 
@@ -7,6 +10,9 @@ import '../controllers/login_controller.dart';
 
 class LoginView extends GetView<LoginController> {
   final passwordC = Get.put(HidePasswordController1());
+  final accountC = Get.put(AccountController());
+  final Username = '';
+  final Password = '';
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -38,7 +44,7 @@ class LoginView extends GetView<LoginController> {
                       //Password Field
                       password(),
                       //tombol Login
-                      tombol()
+                      tombol(context)
                     ]),
                   )
                 ],
@@ -48,7 +54,7 @@ class LoginView extends GetView<LoginController> {
                 mainAxisSize: MainAxisSize.min,
                 children: [
                   //Konntak Bantuan
-                  helpcenter()
+                  helpCenter(context)
                 ],
               )
             ]),
@@ -99,25 +105,27 @@ class LoginView extends GetView<LoginController> {
             ),
           ),
           Container(
-            decoration: BoxDecoration(
-              color: Colors.white,
-              boxShadow: [
-                BoxShadow(
-                    offset: Offset(0.0, 0.5),
-                    color: Colors.black,
-                    blurStyle: BlurStyle.outer)
-              ],
-              borderRadius: BorderRadius.all(Radius.circular(20)),
-            ),
-            child: const TextField(
-              decoration: InputDecoration(
-                border: OutlineInputBorder(
-                    borderRadius: BorderRadius.all(Radius.circular(20))),
-                hintText: 'Input Username',
-                focusColor: Colors.white,
+              decoration: BoxDecoration(
+                color: Colors.white,
+                boxShadow: [
+                  BoxShadow(
+                      offset: Offset(0.0, 0.5),
+                      color: Colors.black,
+                      blurStyle: BlurStyle.outer)
+                ],
+                borderRadius: BorderRadius.all(Radius.circular(20)),
               ),
-            ),
-          ),
+              child: TextField(
+                // onSubmitted: (username) {
+                //   accountC.verify.value?
+                // },
+                decoration: InputDecoration(
+                  border: OutlineInputBorder(
+                      borderRadius: BorderRadius.all(Radius.circular(20))),
+                  hintText: 'Input Username',
+                  focusColor: Colors.white,
+                ),
+              )),
         ]));
   }
 
@@ -186,7 +194,7 @@ class LoginView extends GetView<LoginController> {
         ]));
   }
 
-  tombol() {
+  tombol(context) {
     return Container(
       decoration:
           BoxDecoration(borderRadius: BorderRadius.all(Radius.circular(25))),
@@ -194,7 +202,13 @@ class LoginView extends GetView<LoginController> {
       height: 60,
       child: ElevatedButton(
         style: TextButton.styleFrom(backgroundColor: Color(0xff1AD443)),
-        onPressed: () => Get.offAllNamed(Routes.HOME),
+        onPressed: () {
+          Navigator.push(
+              context, MaterialPageRoute(builder: (context) => HomePage()));
+        },
+        // onPressed: () {
+        //   accountC.isset();
+        // },
         child: const Text(
           'Login',
           style: TextStyle(fontSize: 20),
@@ -203,7 +217,7 @@ class LoginView extends GetView<LoginController> {
     );
   }
 
-  helpcenter() {
+  helpCenter(context) {
     return Container(
         margin: EdgeInsets.only(bottom: 50),
         child: Row(
@@ -211,7 +225,9 @@ class LoginView extends GetView<LoginController> {
           children: [
             Text('Butuh Bantuan?'),
             TextButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.pop(context);
+                },
                 child: Text(
                   'Hubungi Kami',
                   style: TextStyle(color: Colors.yellow[800]),

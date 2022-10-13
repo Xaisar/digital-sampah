@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
-      home: PemayaranView(),//HomePage(), 
+      home: PemayaranView(),
     );
     return FutureBuilder(
       future: Future.delayed(Duration(seconds: 5)),

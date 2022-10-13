@@ -9,6 +9,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:get/get.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
+import '../../../routes/app_pages.dart';
 import '../controllers/home_page_controller.dart';
 
 class HomePage extends StatefulWidget {
@@ -29,40 +30,8 @@ class _HomePageState extends State<HomePage> {
         child: Column(
           children: [
             //appbarr
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 25.0),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Row(
-                    children: [
-                      Text(
-                        "My",
-                        style: TextStyle(
-                          fontSize: 28,
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                      Text(
-                        "Cards",
-                        style: TextStyle(fontSize: 28),
-                      ),
-                    ],
-                  ),
-                  //plus butto
-                  ElevatedButton(
-                    style: ElevatedButton.styleFrom(
-                      padding: EdgeInsets.all(4),
-                      primary: Colors.grey[200],
-                      shape: new CircleBorder(),
-                    ),
-                    onPressed: () {},
-                    child: Icon(Icons.logout),
-                  ),
-                ],
-              ),
-            ),
-            SizedBox(height: 25),
+            Container(
+                margin: EdgeInsets.only(top: 30), child: SizedBox(height: 30)),
             //cards
             Container(
               height: 200,
@@ -104,20 +73,20 @@ class _HomePageState extends State<HomePage> {
                   //sendbutton
                   MyButton(
                     iconImagePath: "assets/icons/send.png",
-                    butoonText: "Harga Sampah  ",
-                    onPressed: (){},
+                    butoonText: "Harga Sampah",
+                    route: Routes.HARGA_SAMPAH,
                   ),
                   //paybutton
                   MyButton(
                     iconImagePath: "assets/icons/riwayat.png",
                     butoonText: "Riwayat",
-                    onPressed: (){},
+                 route: Routes.RIWAYAT,
                   ),
                   //bills button
                   MyButton(
                     iconImagePath: "assets/icons/listrik.png",
                     butoonText: "Listrik",
-                    onPressed: (){Get.to(() => PemayaranView()); },
+                     onPressed: (){Get.to(() => PemayaranView()); },
                   ),
                 ],
               ),
@@ -133,19 +102,19 @@ class _HomePageState extends State<HomePage> {
                   MyButton(
                     iconImagePath: "assets/icons/air.png",
                     butoonText: "Air",
-                    onPressed: (){Get.to(() => PemayaranView()); },
+                     onPressed: (){Get.to(() => PemayaranView()); },
                   ),
                   //paybutton
                   MyButton(
                     iconImagePath: "assets/icons/pbb.png",
                     butoonText: "PBB",
-                    onPressed: (){Get.to(() => PemayaranView()); },
+                     onPressed: (){Get.to(() => PemayaranView()); },
                   ),
                   //bills button
                   MyButton(
                     iconImagePath: "assets/icons/bantuan.png",
                     butoonText: "Bantuan",
-                    onPressed: (){},
+                     route: Routes.BANTUAN,
                   ),
                 ],
               ),
@@ -169,6 +138,7 @@ class _HomePageState extends State<HomePage> {
                       iconImagePath: "assets/icons/statistics.png",
                       tileName: "Statistics",
                       tileSubName: "Payments and Icome",
+                      route: Routes.STATISTIKNASABAH,
                     ),
                     //transaction
                     // SizedBox(height: 10),
@@ -179,6 +149,7 @@ class _HomePageState extends State<HomePage> {
                       iconImagePath: "assets/icons/mobile-transfer.png",
                       tileName: "Transactions",
                       tileSubName: "Transaction History",
+                      route: Routes.TRANSAKSI,
                     ),
                   ],
                 ),

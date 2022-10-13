@@ -1,7 +1,7 @@
 import 'package:get/get.dart';
 
-class TestController extends GetxController {
-  //TODO: Implement TestController
+class TransaksiController extends GetxController {
+  //TODO: Implement TransaksiController
 
   final count = 0.obs;
   @override
@@ -15,6 +15,9 @@ class TestController extends GetxController {
   }
 
   @override
-  void onClose() {}
+  void onClose() {
+    super.onClose();
+  }
+
   void increment() => count.value++;
 }

@@ -80,31 +80,7 @@ class LupaPasswordView extends GetView<LupaPasswordController> {
                         mainAxisAlignment: MainAxisAlignment.end,
                         mainAxisSize: MainAxisSize.min,
                         crossAxisAlignment: CrossAxisAlignment.center,
-                        children: [
-                          Container(
-                            margin: EdgeInsets.only(bottom: 80),
-                            decoration: BoxDecoration(
-                                borderRadius:
-                                    BorderRadius.all(Radius.circular(50))),
-                            width: 150,
-                            height: 60,
-                            child: ElevatedButton(
-                              style: TextButton.styleFrom(
-                                  backgroundColor: Color(0xff1AD443)),
-                              onPressed: () {
-                                Navigator.push(
-                                    context,
-                                    MaterialPageRoute(
-                                        builder: (context) =>
-                                            GantiPasswordView()));
-                              },
-                              child: const Text(
-                                'Konfirmasi',
-                                style: TextStyle(fontSize: 18),
-                              ),
-                            ),
-                          ),
-                        ],
+                        children: [tombolKonfirmasi(context)],
                       )
                     ],
                   ),
@@ -206,5 +182,26 @@ class LupaPasswordView extends GetView<LupaPasswordController> {
             ),
           ),
         ]));
+  }
+
+  tombolKonfirmasi(context) {
+    Container(
+      margin: EdgeInsets.only(bottom: 80),
+      decoration:
+          BoxDecoration(borderRadius: BorderRadius.all(Radius.circular(50))),
+      width: 150,
+      height: 60,
+      child: ElevatedButton(
+        style: TextButton.styleFrom(backgroundColor: Color(0xff1AD443)),
+        onPressed: () {
+          Navigator.push(context,
+              MaterialPageRoute(builder: (context) => GantiPasswordView()));
+        },
+        child: const Text(
+          'Konfirmasi',
+          style: TextStyle(fontSize: 18),
+        ),
+      ),
+    );
   }
 }
