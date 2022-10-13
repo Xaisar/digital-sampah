@@ -3,6 +3,10 @@ import 'package:digital_sampah/app/modules/paymentpage/bindings/paymentpage_bind
 import 'package:digital_sampah/app/modules/paymentpage/views/paymentpage_view.dart';
 import 'package:digital_sampah/app/modules/pemayaran/bindings/pemayaran_binding.dart';
 import 'package:digital_sampah/app/modules/pemayaran/views/pemayaran_view.dart';
+import '../modules/bantuan/bindings/bantuan_binding.dart';
+import '../modules/bantuan/views/bantuan_view.dart';
+import '../modules/hargaSampah/bindings/harga_sampah_binding.dart';
+import '../modules/hargaSampah/views/harga_sampah_view.dart';
 import '../modules/home/bindings/home_binding.dart';
 import '../modules/home/views/home_view.dart';
 import '../modules/home_page/bindings/home_page_binding.dart';
@@ -57,5 +61,50 @@ class AppPages {
       page: () => const LupaPasswordView(),
       binding: LupaPasswordBinding(),
     ),
+    GetPage(
+      name: _Paths.HARGA_SAMPAH,
+      page: () => const HargaSampahView(),
+      binding: HargaSampahBinding(),
+    ),
+    GetPage(
+      name: _Paths.RIWAYAT,
+      page: () => const RiwayatView(),
+      binding: RiwayatBinding(),
+    ),
+    GetPage(
+      name: _Paths.TRANSAKSI,
+      page: () => const TransaksiView(),
+      binding: TransaksiBinding(),
+    ),
+    GetPage(
+      name: _Paths.JADWAL,
+      page: () => const JadwalView(),
+      binding: JadwalBinding(),
+    ),
+    GetPage(
+      name: _Paths.PENGAMBILAN,
+      page: () => const PengambilanView(),
+      binding: PengambilanBinding(),
+    ),
+    GetPage(
+      name: _Paths.BANTUAN,
+      page: () => const BantuanView(),
+      binding: BantuanBinding(),
+    ),
+    GetPage(
+      name: _Paths.STATISTIKNASABAH,
+      page: () => const StatistiknasabahView(),
+      binding: StatistiknasabahBinding(),
+    ),
+    GetPage(
+      name: _Paths.PAYMENTPAGE,
+      page: () => PaymentpageView(),
+      binding: PaymentpageBinding(),
+    ),
+    GetPage(
+      name: _Paths.PEMAYARAN,
+      page: () => const PemayaranView(),
+      binding: PemayaranBinding(),
+    )
   ];
 }
