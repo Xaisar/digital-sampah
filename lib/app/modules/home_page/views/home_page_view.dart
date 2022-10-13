@@ -46,7 +46,7 @@ class _HomePageState extends State<HomePage> {
                     // color: Colors.deepPurple[300],
                   ),
                   MyCard(
-                      color1: Colors.green[400],
+                      // color1: Colors.green[400],
                       Nama: "Mohamad Aji Hermansya",
                       User: "Anggota",
                       Ttl: "Banyuwangi, 23 Februari 2004",
