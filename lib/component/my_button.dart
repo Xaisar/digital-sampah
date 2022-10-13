@@ -1,14 +1,18 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+
+import '../app/routes/app_pages.dart';
 
 class MyButton extends StatelessWidget {
   final String iconImagePath;
   final String butoonText;
+  var route;
 
-  const MyButton({
-    super.key,
-    required this.iconImagePath,
-    required this.butoonText,
-  });
+  MyButton(
+      {super.key,
+      required this.iconImagePath,
+      required this.butoonText,
+      required this.route});
 
   @override
   Widget build(BuildContext context) {
@@ -23,7 +27,7 @@ class MyButton extends StatelessWidget {
               borderRadius: BorderRadius.circular(20),
             ),
           ),
-          onPressed: () {},
+          onPressed: () => Get.offAllNamed(route),
           child: Container(
             height: 60,
             padding: EdgeInsets.all(10),

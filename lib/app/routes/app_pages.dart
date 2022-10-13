@@ -1,5 +1,7 @@
 import 'package:get/get.dart';
 
+import '../modules/bantuan/bindings/bantuan_binding.dart';
+import '../modules/bantuan/views/bantuan_view.dart';
 import '../modules/hargaSampah/bindings/harga_sampah_binding.dart';
 import '../modules/hargaSampah/views/harga_sampah_view.dart';
 import '../modules/home/bindings/home_binding.dart';
@@ -14,8 +16,12 @@ import '../modules/login/bindings/login_binding.dart';
 import '../modules/login/views/login_view.dart';
 import '../modules/lupaPassword/bindings/lupa_password_binding.dart';
 import '../modules/lupaPassword/views/lupa_password_view.dart';
+import '../modules/pengambilan/bindings/pengambilan_binding.dart';
+import '../modules/pengambilan/views/pengambilan_view.dart';
 import '../modules/riwayat/bindings/riwayat_binding.dart';
 import '../modules/riwayat/views/riwayat_view.dart';
+import '../modules/statistikNasabah/bindings/statistiknasabah_binding.dart';
+import '../modules/statistikNasabah/views/statistiknasabah_view.dart';
 import '../modules/transaksi/bindings/transaksi_binding.dart';
 import '../modules/transaksi/views/transaksi_view.dart';
 
@@ -71,6 +77,21 @@ class AppPages {
       name: _Paths.JADWAL,
       page: () => const JadwalView(),
       binding: JadwalBinding(),
+    ),
+    GetPage(
+      name: _Paths.PENGAMBILAN,
+      page: () => const PengambilanView(),
+      binding: PengambilanBinding(),
+    ),
+    GetPage(
+      name: _Paths.BANTUAN,
+      page: () => const BantuanView(),
+      binding: BantuanBinding(),
+    ),
+    GetPage(
+      name: _Paths.STATISTIKNASABAH,
+      page: () => const StatistiknasabahView(),
+      binding: StatistiknasabahBinding(),
     ),
   ];
 }

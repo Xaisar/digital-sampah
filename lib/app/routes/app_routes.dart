@@ -13,6 +13,9 @@ abstract class Routes {
   static const RIWAYAT = _Paths.RIWAYAT;
   static const TRANSAKSI = _Paths.TRANSAKSI;
   static const JADWAL = _Paths.JADWAL;
+  static const PENGAMBILAN = _Paths.PENGAMBILAN;
+  static const BANTUAN = _Paths.BANTUAN;
+  static const STATISTIKNASABAH = _Paths.STATISTIKNASABAH;
 }
 
 abstract class _Paths {
@@ -25,4 +28,7 @@ abstract class _Paths {
   static const RIWAYAT = '/riwayat';
   static const TRANSAKSI = '/transaksi';
   static const JADWAL = '/jadwal';
+  static const PENGAMBILAN = '/pengambilan';
+  static const BANTUAN = '/bantuan';
+  static const STATISTIKNASABAH = '/statistiknasabah';
 }
