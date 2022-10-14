@@ -135,12 +135,16 @@ class PaymentpageView extends GetView<PaymentpageController> {
                                       ),
                                     ],
                                   ),
+                                
+
                                 ],
                               ),
                               Divider(
                                 thickness: 2,
                                 color: Colors.grey.withOpacity(0.5),
                               ),
+                              
+
                             ],
                           ),
                         ),
