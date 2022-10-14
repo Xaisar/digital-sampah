@@ -54,7 +54,7 @@ class _PemayaranViewState extends State<PemayaranView> {
 
   _headSection() {
     return Container(
-      height: 100, //55
+      height: 150, //55
 
       child: Stack(
         children: [
@@ -163,7 +163,7 @@ class _PemayaranViewState extends State<PemayaranView> {
         bottom: 10,
         left: 0,
         child: Container(
-          height: 90,
+          height: 150,
           width: MediaQuery.of(context).size.width,
           decoration: BoxDecoration(
             image: DecorationImage(
