@@ -182,7 +182,7 @@ class LoginView extends GetView<LoginController> {
                 style: TextButton.styleFrom(
                   textStyle: const TextStyle(fontSize: 14),
                 ),
-                onPressed: () => Get.offAllNamed(Routes.LUPA_PASSWORD),
+                onPressed: () => Get.toNamed(Routes.LUPA_PASSWORD),
                 child: Text(
                   'Lupa Password?',
                   style: TextStyle(
@@ -203,7 +203,7 @@ class LoginView extends GetView<LoginController> {
       child: ElevatedButton(
         style: TextButton.styleFrom(backgroundColor: Color(0xff1AD443)),
         onPressed: () {
-          Navigator.push(
+          Navigator.pushReplacement(
               context, MaterialPageRoute(builder: (context) => HomePage()));
         },
         // onPressed: () {
