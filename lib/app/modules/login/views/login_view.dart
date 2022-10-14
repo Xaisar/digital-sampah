@@ -225,9 +225,7 @@ class LoginView extends GetView<LoginController> {
           children: [
             Text('Butuh Bantuan?'),
             TextButton(
-                onPressed: () {
-                  Navigator.pop(context);
-                },
+                onPressed: () {},
                 child: Text(
                   'Hubungi Kami',
                   style: TextStyle(color: Colors.yellow[800]),

@@ -163,7 +163,7 @@ class _PemayaranViewState extends State<PemayaranView> {
         bottom: 10,
         left: 0,
         child: Container(
-          height: 90,
+          height: 200,
           width: MediaQuery.of(context).size.width,
           decoration: BoxDecoration(
             image: DecorationImage(
