@@ -11,7 +11,8 @@ class StatistiknasabahView extends GetView<StatistiknasabahController> {
     return Scaffold(
       appBar: AppBar(
         title: const Text('StatistiknasabahView'),
-        centerTitle: true,
+        backgroundColor: Color(0xFF1AD443),
+        centerTitle: false,
       ),
       body: Center(
         child: Text(

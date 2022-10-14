@@ -16,7 +16,7 @@ class HargaSampahView extends GetView<HargaSampahController> {
           centerTitle: false,
         ),
         body: ListView.builder(
-            itemCount: 1000,
+            itemCount: 110,
             scrollDirection: Axis.vertical,
             itemBuilder: (context, index) {
               return IsiList('Sampah nya Mase', '1.000.000', 'Kg');

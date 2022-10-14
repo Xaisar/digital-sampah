@@ -64,95 +64,93 @@ class PaymentpageView extends GetView<PaymentpageController> {
                 removeTop: true,
                 context: context,
                 child: ListView(
-                  children:[ Column(
+                  children: [
+                    Column(
                       children: [
-                         Container(
-                        //bisa si hapus di atas
-                        child: Column(
-                          children: [
-                            Row(
-                              children: [
-                                Container(
-                                  margin: const EdgeInsets.only(
-                                    top: 10,
-                                    left: 15,
-                                    bottom: 10,
+                        Container(
+                          //bisa si hapus di atas
+                          child: Column(
+                            children: [
+                              Row(
+                                children: [
+                                  Container(
+                                    margin: const EdgeInsets.only(
+                                      top: 10,
+                                      left: 15,
+                                      bottom: 10,
+                                    ),
+                                    width: 45,
+                                    height: 45,
+                                    decoration: BoxDecoration(
+                                        borderRadius: BorderRadius.circular(25),
+                                        color: Colors.green),
+                                    child: Icon(Icons.done,
+                                        size: 30, color: Colors.white),
                                   ),
-                                  width: 45,
-                                  height: 45,
-                                  decoration: BoxDecoration(
-                                      borderRadius: BorderRadius.circular(25),
-                                      color: Colors.green),
-                                  child: Icon(Icons.done,
-                                      size: 30, color: Colors.white),
-                                ),
-                                SizedBox(width: 10),
-                                Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    Text(
-                                      "Listrik Pasca Bayar",
-                                      style: TextStyle(
-                                        fontSize: 16,
-                                        fontWeight: FontWeight.bold,
-                                        color: AppColor.mainColor,
+                                  SizedBox(width: 10),
+                                  Column(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    children: [
+                                      Text(
+                                        "Listrik Pasca Bayar",
+                                        style: TextStyle(
+                                          fontSize: 16,
+                                          fontWeight: FontWeight.bold,
+                                          color: AppColor.mainColor,
+                                        ),
                                       ),
-                                    ),
-                                    SizedBox(height: 10),
-                                    Text(
-                                      "Transaksi Direkam",
-                                      style: TextStyle(
-                                        fontSize: 14,
-                                        fontWeight: FontWeight.bold,
-                                        color: AppColor.idColor,
+                                      SizedBox(height: 10),
+                                      Text(
+                                        "Transaksi Direkam",
+                                        style: TextStyle(
+                                          fontSize: 14,
+                                          fontWeight: FontWeight.bold,
+                                          color: AppColor.idColor,
+                                        ),
                                       ),
-                                    ),
-                                  ],
-                                ),
-                                SizedBox(width: 7),
-                                Column(
-                                  children: [
-                                    Text(
-                                      "",
-                                      style: TextStyle(
-                                        fontSize: 16,
-                                        fontWeight: FontWeight.w700,
-                                        color: AppColor.mainColor,
+                                    ],
+                                  ),
+                                  SizedBox(width: 7),
+                                  Column(
+                                    children: [
+                                      Text(
+                                        "",
+                                        style: TextStyle(
+                                          fontSize: 16,
+                                          fontWeight: FontWeight.w700,
+                                          color: AppColor.mainColor,
+                                        ),
                                       ),
-                                    ),
-                                    SizedBox(
-                                      height: 10,
-                                    ),
-                                    Text(
-                                      "Rp 120000",
-                                      style: TextStyle(
-                                        fontSize: 16,
-                                        fontWeight: FontWeight.w700,
-                                        color: AppColor.mainColor,
+                                      SizedBox(
+                                        height: 10,
                                       ),
-                                    ),
-                                  ],
-                                ),
-                              ],
-                            ),
-                            Divider(
-                              thickness: 2,
-                              color: Colors.grey.withOpacity(0.5),
-                            ),
-                          ],
+                                      Text(
+                                        "Rp 120000",
+                                        style: TextStyle(
+                                          fontSize: 16,
+                                          fontWeight: FontWeight.w700,
+                                          color: AppColor.mainColor,
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                ],
+                              ),
+                              Divider(
+                                thickness: 2,
+                                color: Colors.grey.withOpacity(0.5),
+                              ),
+                            ],
+                          ),
                         ),
-                      ),
                       ],
-                    
-                  ),
+                    ),
                   ],
                 ),
-        
               ),
             ),
-
             SizedBox(height: 2),
-
             Column(
               children: [
                 Text(
@@ -195,8 +193,7 @@ class PaymentpageView extends GetView<PaymentpageController> {
                 ),
               ],
             ),
-
-            SizedBox(height: h*0.2),
+            SizedBox(height: h * 0.2),
             AppLargeButton(
               text: "Selesai",
               backgroundColor: Colors.white,

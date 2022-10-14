@@ -24,8 +24,13 @@ class _PemayaranViewState extends State<PemayaranView> {
       backgroundColor: AppColor.backGroundColor,
       body: Container(
         height: h,
+        // width: w,
         child: Stack(
           children: [
+            // Image.asset(
+            //   'assets/images/backgroundLupaPassword.png',
+            //   fit: BoxFit.fill,
+            // ),
             _headSection(),
             Bills(
                 IconBiils1: "assets/icons/listrik.png",
@@ -212,7 +217,7 @@ class _PemayaranViewState extends State<PemayaranView> {
             )),
         Positioned(
             left: 0,
-            top: 20,
+            top: 50,
             child: Text(
               "Laman Pembayaran",
               style: TextStyle(
