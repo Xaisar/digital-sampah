@@ -33,12 +33,11 @@ class MyCard extends StatelessWidget {
         padding: EdgeInsets.all(20),
         decoration: BoxDecoration(
           gradient: LinearGradient(
-                          colors: [
-                            Color(0xff1DBA3F),
-                            Color(0xff025113),
-
-                          ],
-                        ),
+              colors: [
+            Color(0xff1DBA3F),
+            Color(0xff025113),
+             ],
+           ),
           borderRadius: BorderRadius.circular(16),
         ),
         child: Column(
