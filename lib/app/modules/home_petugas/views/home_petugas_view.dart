@@ -18,11 +18,28 @@ class HomePetugasView extends GetView<HomePetugasController> {
             fit: BoxFit.fill,
           ),
           Column(
-            children: [
+            children: <Widget>[
               Container(
-                  //foto profil sisi kanan, nama disisi kiri
-                  ),
-              ListView(),
+                height: 100,
+                padding: EdgeInsets.only(right: 15.0, top: 30.0),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  children: <Widget>[
+                    CircleAvatar(
+                      backgroundImage: AssetImage('assets/images/avatar.png'),
+                    )
+                  ],
+                ),
+                //foto profil sisi kanan, nama disisi kiri
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: <Widget>[
+                  Text('Hallo Praya',
+                      style: TextStyle(color: Colors.white, fontSize: 30)),
+                ],
+              )
+              // ListView(),
             ],
           )
         ],
