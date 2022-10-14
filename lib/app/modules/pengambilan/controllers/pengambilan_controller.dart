@@ -1,8 +1,6 @@
 import 'package:get/get.dart';
 
 class PengambilanController extends GetxController {
-  //TODO: Implement PengambilanController
-
   final count = 0.obs;
   @override
   void onInit() {

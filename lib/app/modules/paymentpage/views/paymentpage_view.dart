@@ -1,6 +1,5 @@
 import 'package:digital_sampah/colors.dart';
 import 'package:digital_sampah/component1/large_buotom.dart';
-import 'package:digital_sampah/component1/treebotton.dart';
 import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';

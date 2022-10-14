@@ -1,8 +1,6 @@
 import 'package:get/get.dart';
 
 class HomePetugasController extends GetxController {
-  //TODO: Implement HomePetugasController
-
   final count = 0.obs;
   @override
   void onInit() {

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
+// ignore: must_be_immutable
 class MyListTile extends StatelessWidget {
   final String iconImagePath;
   final String tileName;
@@ -59,7 +60,7 @@ class MyListTile extends StatelessWidget {
           ElevatedButton(
             style: ElevatedButton.styleFrom(
               // padding: EdgeInsets.all(4),
-              primary: Colors.grey[200],
+              backgroundColor: Colors.grey[200],
               shape: new CircleBorder(),
             ),
             onPressed: () => Get.toNamed(route),

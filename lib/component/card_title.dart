@@ -1,6 +1,4 @@
-import 'package:digital_sampah/component/my_button.dart';
 import 'package:flutter/material.dart';
-import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 class MyCard extends StatelessWidget {
   final String Nama;
@@ -20,7 +18,6 @@ class MyCard extends StatelessWidget {
     required this.TitleHariPenjemputan,
     required this.TanggalJoin,
     // required this.color1,
-
   });
 
   @override
@@ -33,11 +30,11 @@ class MyCard extends StatelessWidget {
         padding: EdgeInsets.all(20),
         decoration: BoxDecoration(
           gradient: LinearGradient(
-              colors: [
-            Color(0xff1DBA3F),
-            Color(0xff025113),
-             ],
-           ),
+            colors: [
+              Color(0xff1DBA3F),
+              Color(0xff025113),
+            ],
+          ),
           borderRadius: BorderRadius.circular(16),
         ),
         child: Column(
@@ -119,7 +116,7 @@ class MyCard extends StatelessWidget {
                           ],
                         ),
                       ),
-                      SizedBox(height:15),
+                      SizedBox(height: 15),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
@@ -137,7 +134,6 @@ class MyCard extends StatelessWidget {
                 ),
               ],
             ),
-            
           ],
         ),
       ),

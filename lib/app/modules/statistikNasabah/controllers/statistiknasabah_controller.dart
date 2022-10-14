@@ -1,8 +1,6 @@
 import 'package:get/get.dart';
 
 class StatistiknasabahController extends GetxController {
-  //TODO: Implement StatistiknasabahController
-
   final count = 0.obs;
   @override
   void onInit() {

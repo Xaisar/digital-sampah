@@ -1,8 +1,6 @@
 import 'package:get/get.dart';
 
 class HargaSampahController extends GetxController {
-  //TODO: Implement HargaSampahController
-
   final count = 0.obs;
   @override
   void onInit() {

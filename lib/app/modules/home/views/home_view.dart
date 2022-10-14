@@ -53,7 +53,6 @@ class HomeView extends GetView<HomeController> {
               color: Color(0xFF1AD443),
             ),
           ),
-          
           Container(
             margin: EdgeInsets.only(top: 20),
             child: Column(
@@ -70,7 +69,6 @@ class HomeView extends GetView<HomeController> {
                           colors: [
                             Color(0xff1DBA3F),
                             Color(0xff025113),
-
                           ],
                         ),
                       ),
@@ -100,8 +98,6 @@ class HomeView extends GetView<HomeController> {
                               ),
                             ],
                           ),
-
-
                           SizedBox(height: 10),
                           Text(
                             "Saldo Anda",
@@ -135,7 +131,7 @@ class HomeView extends GetView<HomeController> {
                                   ),
                                 ),
                                 style: ElevatedButton.styleFrom(
-                                  primary: Color(0xffEAE509),
+                                  backgroundColor: Color(0xffEAE509),
                                 ),
                               ),
                             ],
@@ -205,67 +201,76 @@ class HomeView extends GetView<HomeController> {
                   height: 7,
                   color: Colors.grey[200],
                 ),
-                SizedBox(height:10),
+                SizedBox(height: 10),
                 // SizedBox(width:3),
                 Expanded(
-          child: Column(
-          crossAxisAlignment: CrossAxisAlignment.stretch,
-          // mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          children: [
-            Wrap(
-              runSpacing: 8,
-              alignment: WrapAlignment.spaceBetween,
-              children: [
-                for (final menuFavorite in menuFavorites) Material(
-                  borderRadius: BorderRadius.circular(16),
-                  clipBehavior: Clip.antiAliasWithSaveLayer,
-                  child: InkWell(
-                    splashColor: menuFavorite['color'].withOpacity(0.4),
-                    highlightColor: menuFavorite['color'].withOpacity(0.2),
-                    onTap: () {},
-                    child: Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Column(
-                        children: [
-                          SizedBox(
-                            height: 60,
-                            width: 60,
-                            child: Stack(
-                              children: [
-                                Align(
-                                  alignment: Alignment.topLeft,
-                                  child: Container(
-                                    height: 50,
-                                    width: 50,
-                                    decoration: BoxDecoration(
-                                      color: menuFavorite['color'].withOpacity(0.4),
-                                      borderRadius: BorderRadius.circular(16),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.stretch,
+                    // mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      Wrap(
+                          runSpacing: 8,
+                          alignment: WrapAlignment.spaceBetween,
+                          children: [
+                            for (final menuFavorite in menuFavorites)
+                              Material(
+                                  borderRadius: BorderRadius.circular(16),
+                                  clipBehavior: Clip.antiAliasWithSaveLayer,
+                                  child: InkWell(
+                                    splashColor:
+                                        menuFavorite['color'].withOpacity(0.4),
+                                    highlightColor:
+                                        menuFavorite['color'].withOpacity(0.2),
+                                    onTap: () {},
+                                    child: Padding(
+                                      padding: const EdgeInsets.all(8.0),
+                                      child: Column(
+                                        children: [
+                                          SizedBox(
+                                            height: 60,
+                                            width: 60,
+                                            child: Stack(
+                                              children: [
+                                                Align(
+                                                  alignment: Alignment.topLeft,
+                                                  child: Container(
+                                                    height: 50,
+                                                    width: 50,
+                                                    decoration: BoxDecoration(
+                                                      color:
+                                                          menuFavorite['color']
+                                                              .withOpacity(0.4),
+                                                      borderRadius:
+                                                          BorderRadius.circular(
+                                                              16),
+                                                    ),
+                                                  ),
+                                                ),
+                                                Align(
+                                                  alignment:
+                                                      Alignment.bottomRight,
+                                                  child: Image.asset(
+                                                    'assets/place.png',
+                                                    height: 50,
+                                                    width: 50,
+                                                  ),
+                                                ),
+                                              ],
+                                            ),
+                                          ),
+                                          Text(
+                                            menuFavorite['label'],
+                                            style: TextStyle(
+                                              fontSize: 15,
+                                            ),
+                                          )
+                                        ],
+                                      ),
                                     ),
-                                  ),
-                                ),
-                                Align(
-                                  alignment: Alignment.bottomRight,
-                                  child: Image.asset('assets/place.png',
-                                    height: 50,
-                                    width: 50,
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ),
-                          Text(menuFavorite['label'], style: TextStyle(
-                            fontSize: 15,
-                          ),)
-                        ],
-                      ),
-                    ),
-                  )
-                ),
-                
-              ]
-            ),
-          ],
-        ),
+                                  )),
+                          ]),
+                    ],
+                  ),
                 ),
               ],
             ),
@@ -295,45 +300,17 @@ class ClipPathClass extends CustomClipper<Path> {
   bool shouldReclip(covariant CustomClipper<Path> oldClipper) => false;
 }
 
-  final List<Map> menuFavorites = [
-    {
-      'label': 'Harga Sampah',
-      'image': '',
-      'color': Colors.green
-    },
-    {
-      'label': 'Riwayat',
-      'image': '',
-      'color': Colors.green
-    },
-    {
-      'label': 'Edukasi',
-      'image': '',
-      'color': Colors.red
-    },
-    {
-      'label': 'PLN',
-      'image': '',
-      'color': Colors.green
-    },
-    {
-      'label': 'Air', //
-      'image': '',
-      'color': Colors.red
-    },
-    {
-      'label': 'PBB',
-      'image': '',
-      'color': Colors.blue
-    },
-    {
-      'label': 'Kesehatan',
-      'image': '',
-      'color': Colors.blue
-    },
-    {
-      'label': 'Bantuan',
-      'image': '',
-      'color': Colors.blue
-    }
-  ];
+final List<Map> menuFavorites = [
+  {'label': 'Harga Sampah', 'image': '', 'color': Colors.green},
+  {'label': 'Riwayat', 'image': '', 'color': Colors.green},
+  {'label': 'Edukasi', 'image': '', 'color': Colors.red},
+  {'label': 'PLN', 'image': '', 'color': Colors.green},
+  {
+    'label': 'Air', //
+    'image': '',
+    'color': Colors.red
+  },
+  {'label': 'PBB', 'image': '', 'color': Colors.blue},
+  {'label': 'Kesehatan', 'image': '', 'color': Colors.blue},
+  {'label': 'Bantuan', 'image': '', 'color': Colors.blue}
+];
