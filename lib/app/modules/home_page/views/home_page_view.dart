@@ -6,11 +6,9 @@ import 'package:digital_sampah/component/my_listtile.dart';
 import 'package:digital_sampah/component/news.dart';
 import 'package:digital_sampah/theme.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
 import 'package:get/get.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 import '../../../routes/app_pages.dart';
-import '../controllers/home_page_controller.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});

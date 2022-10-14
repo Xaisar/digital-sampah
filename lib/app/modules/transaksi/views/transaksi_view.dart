@@ -1,12 +1,6 @@
 import 'package:digital_sampah/app/models/transaction.dart';
-import 'package:digital_sampah/colors.dart';
-import 'package:digital_sampah/component1/treebotton.dart';
 import 'package:digital_sampah/widgets/transaction_item.dart';
 import 'package:flutter/material.dart';
-
-import 'package:get/get.dart';
-
-import '../controllers/transaksi_controller.dart';
 
 class Transaksi extends StatefulWidget {
   const Transaksi({super.key});

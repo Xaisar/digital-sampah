@@ -1,8 +1,6 @@
 import 'package:get/get.dart';
 
 class RiwayatController extends GetxController {
-  //TODO: Implement RiwayatController
-
   final count = 0.obs;
   @override
   void onInit() {

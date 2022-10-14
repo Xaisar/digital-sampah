@@ -4,7 +4,6 @@ import 'package:digital_sampah/colors.dart';
 import 'package:digital_sampah/component1/listbiils.dart';
 import 'package:digital_sampah/component1/large_buotom.dart';
 import 'package:digital_sampah/component1/treebotton.dart';
-import 'package:digital_sampah/widgets/text_size.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -19,7 +18,7 @@ class _PemayaranViewState extends State<PemayaranView> {
   @override
   Widget build(BuildContext context) {
     double h = MediaQuery.of(context).size.height;
-    double w = MediaQuery.of(context).size.width;
+    // double w = MediaQuery.of(context).size.width;
     return Scaffold(
       backgroundColor: AppColor.backGroundColor,
       body: Container(

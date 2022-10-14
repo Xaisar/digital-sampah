@@ -1,7 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
-
-import '../app/routes/app_pages.dart';
 
 class MyButton extends StatelessWidget {
   final String iconImagePath;
@@ -23,7 +20,7 @@ class MyButton extends StatelessWidget {
         ElevatedButton(
           style: ElevatedButton.styleFrom(
             padding: EdgeInsets.all(5),
-            primary: Colors.white,
+            backgroundColor: Colors.white,
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(20),
             ),
