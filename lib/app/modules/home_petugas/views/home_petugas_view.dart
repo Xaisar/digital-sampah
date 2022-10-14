@@ -14,7 +14,7 @@ class HomePetugasView extends GetView<HomePetugasController> {
         fit: StackFit.expand,
         children: [
           Image.asset(
-            'assets/images/backgroundRegister.png',
+            'assets/images/backgroundregister.png',
             fit: BoxFit.fill,
           ),
           Column(
