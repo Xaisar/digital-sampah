@@ -14,6 +14,9 @@ dependencies:
   smooth_page_indicator: ^1.0.0+2
 
 dev_dependencies:
+  rflutter_alert: ^2.0.4
+  flutter_local_notifications: ^12.0.2
+  url_launcher: ^6.1.6
   flutter_launcher_icons: ^0.10.0                                                                                     
   flutter_lints: ^2.0.0
   flutter_test:

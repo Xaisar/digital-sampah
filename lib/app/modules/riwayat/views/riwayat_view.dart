@@ -19,7 +19,7 @@ class RiwayatView extends GetView<RiwayatController> {
             itemCount: 110,
             scrollDirection: Axis.vertical,
             itemBuilder: (context, index) {
-              return IsiList('Sampah nya Mase', '1.000.000', 'Kg');
+              return IsiList('Pembeayaran air', '1.000.000', 'Kg');
             }));
   }
 
@@ -43,7 +43,8 @@ class RiwayatView extends GetView<RiwayatController> {
                   ),
                   CircleAvatar(
                     backgroundImage: AssetImage('assets/icons/listrik.png'),
-                    radius: 50,
+                    backgroundColor: Colors.white,
+                    radius: 10,
                   )
                 ],
               ),
@@ -52,7 +53,7 @@ class RiwayatView extends GetView<RiwayatController> {
                 alignment: Alignment.centerLeft,
                 padding: EdgeInsets.only(bottom: 10, left: 10, right: 10),
                 child: Text(
-                  'Rp. ' + count,
+                  '- Rp. ' + count,
                   textAlign: TextAlign.left,
                   style: TextStyle(fontSize: 18),
                 ))
