@@ -21,15 +21,6 @@ class LupaPasswordView extends GetView<LupaPasswordController> {
               fit: BoxFit.fill,
             ),
             AppBar(
-              leading: ElevatedButton(
-                  style: TextButton.styleFrom(
-                    backgroundColor: Colors.transparent,
-                  ),
-                  onPressed: () => Get.offAllNamed(Routes.LOGIN),
-                  child: Icon(
-                    Icons.arrow_circle_left_outlined,
-                    color: Colors.black,
-                  )),
               backgroundColor: Colors.transparent,
               elevation: 0.0,
             ),
@@ -185,7 +176,7 @@ class LupaPasswordView extends GetView<LupaPasswordController> {
   }
 
   tombolKonfirmasi(context) {
-    Container(
+    return Container(
       margin: EdgeInsets.only(bottom: 80),
       decoration:
           BoxDecoration(borderRadius: BorderRadius.all(Radius.circular(50))),

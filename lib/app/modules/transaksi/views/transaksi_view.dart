@@ -19,6 +19,11 @@ class _TransaksiState extends State<Transaksi> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: Text('Transaksi Terkahir'),
+        backgroundColor: Color(0xFF1AD443),
+        centerTitle: false,
+      ),
       body: Container(
         child: Column(
           children: [
@@ -29,33 +34,33 @@ class _TransaksiState extends State<Transaksi> {
                 ),
                 child: Column(
                   children: [
-                    Padding(
-                      padding: const EdgeInsets.symmetric(
-                        vertical: 30,
-                        horizontal: 25,
-                      ),
-                      child: Row(
-                        children: [
-                          AppButtons(
-                            icon: Icons.chevron_left_sharp,
-                            iconColor: AppColor.mainColor,
-                            backGroundColor: Colors.white,
-                            onTap: () {},
-                          ),
-                          SizedBox(width: 5),
-                          const Expanded(
-                            child: Text(
-                              "Transaksi Terakhir",
-                              style: TextStyle(
-                                fontSize: 18,
-                                color: Color(0xFF3D538F),
-                                fontWeight: FontWeight.bold,
-                              ),
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
+                    // Padding(
+                    //   padding: const EdgeInsets.symmetric(
+                    //     vertical: 30,
+                    //     horizontal: 25,
+                    //   ),
+                    //   child: Row(
+                    //     children: [
+                    //       AppButtons(
+                    //         icon: Icons.chevron_left_sharp,
+                    //         iconColor: AppColor.mainColor,
+                    //         backGroundColor: Colors.white,
+                    //         onTap: () {},
+                    //       ),
+                    //       SizedBox(width: 5),
+                    //       const Expanded(
+                    //         child: Text(
+                    //           "Transaksi Terakhir",
+                    //           style: TextStyle(
+                    //             fontSize: 18,
+                    //             color: Color(0xFF3D538F),
+                    //             fontWeight: FontWeight.bold,
+                    //           ),
+                    //         ),
+                    //       ),
+                    //     ],
+                    //   ),
+                    // ),
                     Expanded(
                       child: ListView.builder(
                         itemBuilder: (context, index) {

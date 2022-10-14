@@ -62,7 +62,7 @@ class MyListTile extends StatelessWidget {
               primary: Colors.grey[200],
               shape: new CircleBorder(),
             ),
-            onPressed: () => Get.offAllNamed(route),
+            onPressed: () => Get.toNamed(route),
             child: Icon(
               Icons.arrow_forward_ios,
               color: Colors.black,
