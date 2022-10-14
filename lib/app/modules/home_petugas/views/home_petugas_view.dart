@@ -9,16 +9,24 @@ class HomePetugasView extends GetView<HomePetugasController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('HomePetugasView'),
-        centerTitle: true,
-      ),
-      body: Center(
-        child: Text(
-          'HomePetugasView is working',
-          style: TextStyle(fontSize: 20),
-        ),
-      ),
+      body: Container(
+          child: Stack(
+        fit: StackFit.expand,
+        children: [
+          Image.asset(
+            'assets/images/backgroundregister.png',
+            fit: BoxFit.fill,
+          ),
+          Column(
+            children: [
+              Container(
+                  //foto profil sisi kanan, nama disisi kiri
+                  ),
+              ListView(),
+            ],
+          )
+        ],
+      )),
     );
   }
 }
