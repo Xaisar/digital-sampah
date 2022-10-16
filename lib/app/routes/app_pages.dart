@@ -63,7 +63,7 @@ class AppPages {
     ),
     GetPage(
       name: _Paths.HARGA_SAMPAH,
-      page: () => const HargaSampahView(),
+      page: () => HargaSampahView(),
       binding: HargaSampahBinding(),
     ),
     GetPage(

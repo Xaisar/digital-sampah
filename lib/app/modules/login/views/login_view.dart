@@ -224,7 +224,35 @@ class LoginView extends GetView<LoginController> {
           children: [
             Text('Butuh Bantuan?'),
             TextButton(
-                onPressed: () {},
+                onPressed: () {
+                  showDialog(
+                      context: context,
+                      builder: (context) {
+                        return Dialog(
+                          // shape: [ShapeDecoration(shape: shape)],
+                          alignment: Alignment.center,
+                          child: Container(
+                            padding: EdgeInsets.all(10),
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.start,
+                              mainAxisSize: MainAxisSize.min,
+                              children: [
+                                Container(
+                                  alignment: Alignment.topCenter,
+                                  child: Text(
+                                    'Kontak Bantuan',
+                                    style: TextStyle(
+                                        fontSize: 25,
+                                        color: Colors.black,
+                                        fontWeight: FontWeight.bold),
+                                  ),
+                                )
+                              ],
+                            ),
+                          ),
+                        );
+                      });
+                },
                 child: Text(
                   'Hubungi Kami',
                   style: TextStyle(color: Colors.yellow[800]),
