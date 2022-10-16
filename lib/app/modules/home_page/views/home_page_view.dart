@@ -144,21 +144,22 @@ class _HomePageState extends State<HomePage> {
                   children: [
                     //statistics
                     MyListTile(
-                      iconImagePath: "assets/icons/statistics.png",
-                      tileName: "Statistics",
-                      tileSubName: "Payments and Icome",
-                      route: Routes.STATISTIKNASABAH,
+                      iconImagePath: "assets/icons/mobile-transfer.png",
+                      tileName: "Transactions",
+                      tileSubName: "Transaction History",
+                      route: Routes.TRANSAKSI,
                     ),
+
                     //transaction
                     // SizedBox(height: 10),
                     Divider(
                       color: Colors.grey[700],
                     ),
                     MyListTile(
-                      iconImagePath: "assets/icons/mobile-transfer.png",
-                      tileName: "Transactions",
-                      tileSubName: "Transaction History",
-                      route: Routes.TRANSAKSI,
+                      iconImagePath: "assets/icons/statistics.png",
+                      tileName: "Statistics",
+                      tileSubName: "Payments and Icome",
+                      route: Routes.STATISTIKNASABAH,
                     ),
                   ],
                 ),
