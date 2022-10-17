@@ -88,7 +88,7 @@ class AppPages {
     ),
     GetPage(
       name: _Paths.BANTUAN,
-      page: () => const BantuanView(),
+      page: () => BantuanView(),
       binding: BantuanBinding(),
     ),
     GetPage(
