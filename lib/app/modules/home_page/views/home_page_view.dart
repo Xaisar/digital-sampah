@@ -208,14 +208,14 @@ class _HomePageState extends State<HomePage> {
                       children: [
                         //statistics
                         News(
-                            IconImagePath: "assets/images/1.png",
+                            IconImagePath: "assets/images/10.jpg",
                             Judul: "Sosialisisai Pemilihan Sampah!",
                             TitleText:
                                 "sampah merupakan masalah yang umum dihadapi oleh masyarakat pada umumnya. Sampah yang tidak terkelola dengan baik akan menjadi tempat berkembangbiaknya kuman penyakit serta vektor penyakit."),
                         //transaction
                         SizedBox(height: 15),
                         News(
-                            IconImagePath: "assets/images/1.png",
+                            IconImagePath: "assets/images/10.jpg",
                             Judul: "Sosialisisai Pemilihan Sampah!",
                             TitleText:
                                 "sampah merupakan masalah yang umum dihadapi oleh masyarakat pada umumnya. Sampah yang tidak terkelola dengan baik akan menjadi tempat berkembangbiaknya kuman penyakit serta vektor penyakit."),
