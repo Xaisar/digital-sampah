@@ -39,6 +39,7 @@ class HargaSampahView extends GetView<HargaSampahController> {
           centerTitle: false,
         ),
         body: ListView.builder(
+            padding: EdgeInsets.only(top: 10),
             itemCount: myList.length,
             scrollDirection: Axis.vertical,
             itemBuilder: (context, index) {
@@ -50,7 +51,7 @@ class HargaSampahView extends GetView<HargaSampahController> {
   IsiList(nama, count, satuan) {
     return Container(
         // width: Get.width,
-        margin: EdgeInsets.symmetric(horizontal: 10, vertical: 10),
+        margin: EdgeInsets.only(bottom: 10, left: 10, right: 10),
         decoration: BoxDecoration(
             color: Colors.white,
             borderRadius: BorderRadius.all(Radius.circular(20))),

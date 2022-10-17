@@ -68,7 +68,7 @@ class AppPages {
     ),
     GetPage(
       name: _Paths.RIWAYAT,
-      page: () => const RiwayatView(),
+      page: () => RiwayatView(),
       binding: RiwayatBinding(),
     ),
     GetPage(
