@@ -5,6 +5,7 @@ import 'package:digital_sampah/component/my_card.dart';
 import 'package:digital_sampah/component/my_listtile.dart';
 import 'package:digital_sampah/component/news.dart';
 import 'package:digital_sampah/theme.dart';
+import 'package:digital_sampah/widgets/pageDevelope.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
@@ -144,11 +145,12 @@ class _HomePageState extends State<HomePage> {
                   children: [
                     //statistics
                     MyListTile(
-                      iconImagePath: "assets/icons/mobile-transfer.png",
-                      tileName: "Transactions",
-                      tileSubName: "Transaction History",
-                      route: Routes.TRANSAKSI,
-                    ),
+                        iconImagePath: "assets/icons/mobile-transfer.png",
+                        tileName: "Transactions",
+                        tileSubName: "Transaction History",
+                        route: () {
+                          Get.toNamed(Routes.TRANSAKSI);
+                        }),
 
                     //transaction
                     // SizedBox(height: 10),
@@ -156,11 +158,12 @@ class _HomePageState extends State<HomePage> {
                       color: Colors.grey[700],
                     ),
                     MyListTile(
-                      iconImagePath: "assets/icons/statistics.png",
-                      tileName: "Statistics",
-                      tileSubName: "Payments and Icome",
-                      route: Routes.STATISTIKNASABAH,
-                    ),
+                        iconImagePath: "assets/icons/statistics.png",
+                        tileName: "Statistics",
+                        tileSubName: "Payments and Icome",
+                        route: () {
+                          Get.to(() => PageDevelope());
+                        }),
                   ],
                 ),
               ),
