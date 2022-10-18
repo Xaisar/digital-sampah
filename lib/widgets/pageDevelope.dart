@@ -1,0 +1,48 @@
+import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+
+class PageDevelope extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: Scaffold(
+          backgroundColor: Colors.grey[200],
+          body: Stack(fit: StackFit.expand, children: <Widget>[
+            Column(
+              mainAxisAlignment: MainAxisAlignment.end,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                Container(
+                  margin: EdgeInsets.only(bottom: 40),
+                  decoration: BoxDecoration(
+                      borderRadius: BorderRadius.all(Radius.circular(25))),
+                  width: Get.width * 0.8,
+                  height: 50,
+                  child: ElevatedButton(
+                    style: TextButton.styleFrom(
+                        backgroundColor: Color(0xff1AD443)),
+                    onPressed: () => Get.back(),
+                    child: const Text(
+                      'Kembali',
+                      style: TextStyle(fontSize: 20),
+                    ),
+                  ),
+                ),
+              ],
+            ),
+            Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                SizedBox(
+                  width: Get.width * 0.9,
+                  //vector succes
+                  child: Image.asset("assets/images/ilustrasiControl.png"),
+                ),
+              ],
+            ),
+          ])),
+    );
+  }
+}

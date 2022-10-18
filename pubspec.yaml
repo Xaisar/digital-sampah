@@ -14,6 +14,7 @@ dependencies:
   smooth_page_indicator: ^1.0.0+2
 
 dev_dependencies:
+  rxdart: ^0.27.5
   http: ^0.13.5
   vibration: ^1.7.6
   rflutter_alert: ^2.0.4
