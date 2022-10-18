@@ -1,6 +1,7 @@
 import 'package:digital_sampah/app/modules/bantuan/views/bantuan_view.dart';
 import 'package:digital_sampah/app/modules/home_page/views/home_page_view.dart';
 import 'package:digital_sampah/app/modules/home_petugas/views/home_petugas_view.dart';
+import 'package:digital_sampah/app/modules/jadwal/views/jadwal_view.dart';
 import 'package:digital_sampah/app/modules/pemayaran/views/pemayaran_view.dart';
 import 'package:digital_sampah/app/modules/transaksi/views/transaksi_view.dart';
 import 'package:digital_sampah/widgets/splash.dart';
@@ -18,7 +19,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
-      home: BantuanView(),
+      home: JadwalView(),
     );
     return FutureBuilder(
       future: Future.delayed(Duration(seconds: 5)),

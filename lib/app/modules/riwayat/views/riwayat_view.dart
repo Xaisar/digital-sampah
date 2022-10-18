@@ -19,7 +19,7 @@ class RiwayatView extends GetView<RiwayatController> {
             itemCount: 110,
             scrollDirection: Axis.vertical,
             itemBuilder: (context, index) {
-              return IsiList('Pembeayaran air', '1.000.000', 'Kg');
+              return IsiList('Pembayaran air', '1.000.000', 'Kg');
             }));
   }
 
