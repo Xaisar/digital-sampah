@@ -210,7 +210,9 @@ class BantuanView extends GetView<BantuanController> {
                                               child: Text(
                                                 'Hubungi Kami',
                                                 style: TextStyle(
-                                                    color: Colors.yellow[800]),
+                                                    color: AppColor.maingreen,
+                                                    decoration: TextDecoration.underline,
+                                                    ),
                                               )),
                                         ),
                                       ],
