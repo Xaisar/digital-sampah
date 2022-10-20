@@ -8,11 +8,10 @@ import 'package:get/get.dart';
 import '../controllers/bantuan_controller.dart';
 
 class BantuanView extends GetView<BantuanController> {
-    final List<Map<String, dynamic>> kontakBantuan = [
+  final List<Map<String, dynamic>> kontakBantuan = [
     {'Name': 'Stranger', 'Nomor': '+6285212568455'},
     {'Name': 'Aji', 'Nomor': '+6281334967376'}
   ];
-
 
   @override
   Widget build(BuildContext context) {
@@ -39,9 +38,8 @@ class BantuanView extends GetView<BantuanController> {
               width: double.maxFinite,
               height: h * 0.14,
               decoration: BoxDecoration(
-                image: DecorationImage(
-                    
-                    image: AssetImage("assets/icons/logo.png")),
+                image:
+                    DecorationImage(image: AssetImage("assets/icons/logo.png")),
               ),
             ),
             Text(
@@ -78,14 +76,14 @@ class BantuanView extends GetView<BantuanController> {
                 child: ListView(
                   children: [
                     Column(
-                      
                       children: [
                         Container(
                           //bisa si hapus di atas
                           child: Column(
                             children: [
                               Container(
-                                padding: EdgeInsets.only(top: 20, right: 0, left: 85) ,
+                                padding: EdgeInsets.only(
+                                    top: 20, right: 0, left: 85),
                                 child: Row(
                                   // crossAxisAlignment: CrossAxisAlignment.center,
                                   children: [
@@ -101,7 +99,6 @@ class BantuanView extends GetView<BantuanController> {
                                             color: AppColor.mainColor,
                                           ),
                                         ),
-                                        
                                         Text(
                                           "0813-3496-7698",
                                           style: TextStyle(
@@ -110,7 +107,6 @@ class BantuanView extends GetView<BantuanController> {
                                             color: AppColor.idColor,
                                           ),
                                         ),
-
                                         Text(
                                           "Samsudin",
                                           style: TextStyle(
@@ -128,7 +124,6 @@ class BantuanView extends GetView<BantuanController> {
                                             color: AppColor.idColor,
                                           ),
                                         ),
-
                                         Text(
                                           "Arile Noahh",
                                           style: TextStyle(
@@ -137,71 +132,94 @@ class BantuanView extends GetView<BantuanController> {
                                             color: AppColor.idColor,
                                           ),
                                         ),
-
-                            
-            Container(
-              child: TextButton(
-                  onPressed: () {
-                    showDialog(
-                        context: context,
-                        builder: (context) {
-                          return Dialog(
-                            backgroundColor: Colors.grey[300],
-                            alignment: Alignment.center,
-                            child: Container(
-                              padding: EdgeInsets.all(10),
-                              child: Column(
-                                mainAxisAlignment: MainAxisAlignment.start,
-                                mainAxisSize: MainAxisSize.min,
-                                children: [
-                                  //title whatsapp
-                                  Container(
-                                      alignment: Alignment.topCenter,
-                                      margin: EdgeInsets.only(bottom: 20),
-                                      child: Row(
-                                        mainAxisAlignment:
-                                            MainAxisAlignment.center,
-                                        children: [
-                                          Image.asset(
-                                            'assets/logo/whatsApp.png',
-                                            height: 50,
-                                            width: 50,
-                                          ),
-                                          Text(
-                                            'WhatsApp',
-                                            style: TextStyle(
-                                                color: Colors.green,
-                                                fontWeight: FontWeight.bold,
-                                                fontSize: 20),
-                                          )
-                                        ],
-                                      )),
-                                  contactUI(kontakBantuan[0]['Name'],
-                                      kontakBantuan[0]['Nomor']),
-                                  contactUI(kontakBantuan[1]['Name'],
-                                      kontakBantuan[1]['Nomor']),
-                                ],
-                              ),
-                            ),
-                          );
-                        });
-                  },
-                  child: Text(
-                    'Hubungi Kami',
-                    style: TextStyle(color: Colors.yellow[800]),
-                  )),
-            ),
-            
-                
-                  ],
-               ),
+                                        Container(
+                                          child: TextButton(
+                                              onPressed: () {
+                                                showDialog(
+                                                    context: context,
+                                                    builder: (context) {
+                                                      return Dialog(
+                                                        backgroundColor:
+                                                            Colors.grey[300],
+                                                        alignment:
+                                                            Alignment.center,
+                                                        child: Container(
+                                                          padding:
+                                                              EdgeInsets.all(
+                                                                  10),
+                                                          child: Column(
+                                                            mainAxisAlignment:
+                                                                MainAxisAlignment
+                                                                    .start,
+                                                            mainAxisSize:
+                                                                MainAxisSize
+                                                                    .min,
+                                                            children: [
+                                                              //title whatsapp
+                                                              Container(
+                                                                  alignment:
+                                                                      Alignment
+                                                                          .topCenter,
+                                                                  margin: EdgeInsets
+                                                                      .only(
+                                                                          bottom:
+                                                                              20),
+                                                                  child: Row(
+                                                                    mainAxisAlignment:
+                                                                        MainAxisAlignment
+                                                                            .center,
+                                                                    children: [
+                                                                      Image
+                                                                          .asset(
+                                                                        'assets/logo/whatsApp.png',
+                                                                        height:
+                                                                            50,
+                                                                        width:
+                                                                            50,
+                                                                      ),
+                                                                      Text(
+                                                                        'WhatsApp',
+                                                                        style: TextStyle(
+                                                                            color:
+                                                                                Colors.green,
+                                                                            fontWeight: FontWeight.bold,
+                                                                            fontSize: 20),
+                                                                      )
+                                                                    ],
+                                                                  )),
+                                                              contactUI(
+                                                                  kontakBantuan[
+                                                                          0]
+                                                                      ['Name'],
+                                                                  kontakBantuan[
+                                                                          0][
+                                                                      'Nomor']),
+                                                              contactUI(
+                                                                  kontakBantuan[
+                                                                          1]
+                                                                      ['Name'],
+                                                                  kontakBantuan[
+                                                                          1][
+                                                                      'Nomor']),
+                                                            ],
+                                                          ),
+                                                        ),
+                                                      );
+                                                    });
+                                              },
+                                              child: Text(
+                                                'Hubungi Kami',
+                                                style: TextStyle(
+                                                    color: AppColor.maingreen,
+                                                    decoration: TextDecoration.underline,
+                                                    ),
+                                              )),
+                                        ),
+                                      ],
+                                    ),
                                   ],
-                                  
                                 ),
                               ),
-                             
-                              
-
                             ],
                           ),
                         ),
@@ -211,14 +229,13 @@ class BantuanView extends GetView<BantuanController> {
                 ),
               ),
             ),
-            
           ],
         ),
       ),
     );
   }
-  
-   helpCenter(context, List<Map<String, dynamic>> listkontak) {
+
+  helpCenter(context, List<Map<String, dynamic>> listkontak) {
     return Container(
         margin: EdgeInsets.only(bottom: 50),
         child: Row(
@@ -278,7 +295,6 @@ class BantuanView extends GetView<BantuanController> {
           ],
         ));
   }
-
 
   contactUI(Nama, Nomor) {
     return Container(

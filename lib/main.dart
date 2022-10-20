@@ -1,6 +1,7 @@
 import 'package:digital_sampah/app/modules/bantuan/views/bantuan_view.dart';
 import 'package:digital_sampah/app/modules/home_page/views/home_page_view.dart';
 import 'package:digital_sampah/app/modules/home_petugas/views/home_petugas_view.dart';
+import 'package:digital_sampah/app/modules/jadwal/views/jadwal_view.dart';
 import 'package:digital_sampah/app/modules/pemayaran/views/pemayaran_view.dart';
 import 'package:digital_sampah/app/modules/transaksi/views/transaksi_view.dart';
 import 'package:digital_sampah/ujicoba.dart';

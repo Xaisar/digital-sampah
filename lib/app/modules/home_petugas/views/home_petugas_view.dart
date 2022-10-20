@@ -23,16 +23,16 @@ class HomePetugasView extends GetView<HomePetugasController> {
               Padding(
                 padding: const EdgeInsets.all(12.0),
                 child: Row(
-                  mainAxisAlignment: MainAxisAlignment.end,
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    // Text(
-                    //   "Hallo Praya!",
-                    //   style: TextStyle(
-                    //     fontSize: 30,
-                    //     color: Colors.white,
-                    //     fontWeight: FontWeight.normal,
-                    //   ),
-                    // ),
+                    Text(
+                      "Hallo Praya!",
+                      style: TextStyle(
+                        fontSize: 30,
+                        color: Colors.white,
+                        fontWeight: FontWeight.normal,
+                      ),
+                    ),
                     CircleAvatar(
                       backgroundImage: AssetImage('assets/images/avatar.png'),
                     ),
@@ -40,7 +40,7 @@ class HomePetugasView extends GetView<HomePetugasController> {
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.all(18.0),
+                padding: const EdgeInsets.only(top: 80.0, left: 18.0),
                 child: Text(
                   "Menu Petugas",
                   style: TextStyle(
@@ -50,15 +50,16 @@ class HomePetugasView extends GetView<HomePetugasController> {
                 ),
               ),
               Padding(
-                  padding: const EdgeInsets.all(12.0),
+                  padding:
+                      const EdgeInsets.only(top: 40.0, left: 10.0, right: 10.0),
                   child: Center(
                     child: Wrap(
                       spacing: 20.0,
-                      runSpacing: 20.0,
+                      runSpacing: 30.0,
                       children: [
                         SizedBox(
-                          width: 160.0,
-                          height: 160.0,
+                          width: 300.0,
+                          height: 100.0,
                           child: Card(
                             color: Color(0xff1DBA3F),
                             elevation: 2.0,
@@ -86,8 +87,8 @@ class HomePetugasView extends GetView<HomePetugasController> {
                           ),
                         ),
                         SizedBox(
-                          width: 160.0,
-                          height: 160.0,
+                          width: 300.0,
+                          height: 100.0,
                           child: Card(
                             color: Color(0xff1DBA3F),
                             elevation: 2.0,
@@ -115,8 +116,8 @@ class HomePetugasView extends GetView<HomePetugasController> {
                           ),
                         ),
                         SizedBox(
-                          width: 160.0,
-                          height: 160.0,
+                          width: 300.0,
+                          height: 100.0,
                           child: Card(
                             color: Color(0xff1DBA3F),
                             elevation: 2.0,
@@ -144,66 +145,8 @@ class HomePetugasView extends GetView<HomePetugasController> {
                           ),
                         ),
                         SizedBox(
-                          width: 160.0,
-                          height: 160.0,
-                          child: Card(
-                            color: Color(0xff1DBA3F),
-                            elevation: 2.0,
-                            shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(8.0),
-                            ),
-                            child: Center(
-                              child: Padding(
-                                padding: const EdgeInsets.all(8.0),
-                                child: Column(
-                                  children: [
-                                    // Image.asset("*"), gambar width: 64.0
-                                    SizedBox(
-                                      height: 10.0,
-                                    ),
-                                    Text("data",
-                                        style: TextStyle(
-                                            color: Colors.white,
-                                            fontWeight: FontWeight.bold,
-                                            fontSize: 20.0)),
-                                  ],
-                                ),
-                              ),
-                            ),
-                          ),
-                        ),
-                        SizedBox(
-                          width: 160.0,
-                          height: 160.0,
-                          child: Card(
-                            color: Color(0xff1DBA3F),
-                            elevation: 2.0,
-                            shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(8.0),
-                            ),
-                            child: Center(
-                              child: Padding(
-                                padding: const EdgeInsets.all(8.0),
-                                child: Column(
-                                  children: [
-                                    // Image.asset("*"), gambar width: 64.0
-                                    SizedBox(
-                                      height: 10.0,
-                                    ),
-                                    Text("data",
-                                        style: TextStyle(
-                                            color: Colors.white,
-                                            fontWeight: FontWeight.bold,
-                                            fontSize: 20.0)),
-                                  ],
-                                ),
-                              ),
-                            ),
-                          ),
-                        ),
-                        SizedBox(
-                          width: 160.0,
-                          height: 160.0,
+                          width: 300.0,
+                          height: 100.0,
                           child: Card(
                             color: Color(0xff1DBA3F),
                             elevation: 2.0,
