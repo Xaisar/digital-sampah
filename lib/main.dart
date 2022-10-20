@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
-      home: BantuanView(),
+      home: HomePetugasView(),
     );
     return FutureBuilder(
       future: Future.delayed(Duration(seconds: 5)),

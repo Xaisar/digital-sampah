@@ -23,16 +23,16 @@ class HomePetugasView extends GetView<HomePetugasController> {
               Padding(
                 padding: const EdgeInsets.all(12.0),
                 child: Row(
-                  mainAxisAlignment: MainAxisAlignment.end,
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    // Text(
-                    //   "Hallo Praya!",
-                    //   style: TextStyle(
-                    //     fontSize: 30,
-                    //     color: Colors.white,
-                    //     fontWeight: FontWeight.normal,
-                    //   ),
-                    // ),
+                    Text(
+                      "Hallo Praya!",
+                      style: TextStyle(
+                        fontSize: 30,
+                        color: Colors.white,
+                        fontWeight: FontWeight.normal,
+                      ),
+                    ),
                     CircleAvatar(
                       backgroundImage: AssetImage('assets/images/avatar.png'),
                     ),
@@ -40,7 +40,7 @@ class HomePetugasView extends GetView<HomePetugasController> {
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.all(18.0),
+                padding: const EdgeInsets.only(top: 80.0, left: 18.0),
                 child: Text(
                   "Menu Petugas",
                   style: TextStyle(
@@ -50,11 +50,12 @@ class HomePetugasView extends GetView<HomePetugasController> {
                 ),
               ),
               Padding(
-                  padding: const EdgeInsets.all(12.0),
+                  padding:
+                      const EdgeInsets.only(top: 40.0, left: 10.0, right: 10.0),
                   child: Center(
                     child: Wrap(
                       spacing: 20.0,
-                      runSpacing: 20.0,
+                      runSpacing: 30.0,
                       children: [
                         SizedBox(
                           width: 300.0,
