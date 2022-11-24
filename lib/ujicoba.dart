@@ -5,31 +5,28 @@ class ujicoba extends StatelessWidget {
   final List<Map<String, dynamic>> listcoba = [
     {'angka': ""}
   ].obs;
+  final List<Map<String, dynamic>> listnama = [
+    {'Nama': "Paijo", 'Id': "1"},
+    {'Nama': "Paijo1", 'Id': "2"},
+    {'Nama': "Paijo2", 'Id': "3"},
+    {'Nama': "Paijo3", 'Id': "4"},
+    {'Nama': "Paijo4", 'Id': "5"}
+  ];
+  static String nama = "";
+  List<String> apel = ["siapa", "nama", "kenapa"];
 
   @override
   Widget build(BuildContext context) {
     return Obx(() => Scaffold(
         appBar: AppBar(title: Text('Ini Uji Coba')),
-        body: Stack(children: [
-          ListView.builder(
-              itemCount: listcoba.length,
-              itemBuilder: (context, index) {
-                return isiList(index);
-              }),
-          Column(
-            mainAxisAlignment: MainAxisAlignment.end,
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              MaterialButton(
-                onPressed: () {
-                  print(listcoba);
-                },
-                color: Colors.blue,
-                child: Text('print'),
-              )
-            ],
-          )
-        ]),
+        body: ListView.builder(
+            itemCount: listcoba.length,
+            itemBuilder: (context, index) {
+              return Container(
+                  width: Get.width * 0.5,
+                  margin: EdgeInsets.all(10),
+                  child: isiList(index));
+            }),
         floatingActionButton: FloatingActionButton(
           onPressed: () {
             // var count = num.parse(listcoba[listcoba.length - 1]['angka']);
@@ -46,46 +43,37 @@ class ujicoba extends StatelessWidget {
   }
 
   isiList(index) {
-    return Container(
-        width: 250.0,
-        margin: EdgeInsets.all(10),
-        child: TextField(
-          keyboardType: TextInputType.number,
-          onChanged: (isi) {
-            var i = isi;
-            listcoba[index]['angka'] = i;
-          },
-          decoration: InputDecoration(
-              suffixIcon: GestureDetector(
-                  onTap: () {
-                    print(listcoba[index]['angka']);
-                  },
-                  child: Icon(
-                    Icons.print,
-                    color: Colors.blue,
-                  ))),
-        ));
-    // return Container(
-    //     alignment: Alignment.center,
-    //     margin: EdgeInsets.only(top: 10, left: 10, right: 10),
-    //     color: Colors.blue[200],
-    //     child: Row(
-    //       mainAxisAlignment: MainAxisAlignment.spaceBetween,
-    //       children: [
-    //         TextField(
-    //           onSubmitted: (isi) {
-    //             var i = isi;
-    //             listcoba[index]['angka'] = i;
-    //           },
-    //           decoration: InputDecoration(
-    //             // border: OutlineInputBorder(
-    //             //     borderRadius: BorderRadius.all(Radius.circular(10))
-    //             //     ),
-    //             hintText: 'Input Username',
-    //             focusColor: Colors.white,
-    //           ),
-    //         ),
-    //       ],
-    //     ));
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceAround,
+      children: [
+        Flexible(
+          child: DropdownButton(
+              items: ["30", "50", "60"].map((e) {
+                return DropdownMenuItem(value: e, child: Text(e));
+              }).toList(),
+              onChanged: (isi) {
+                nama = isi.toString();
+              }),
+        ),
+        Flexible(
+          child: TextField(
+            keyboardType: TextInputType.number,
+            onChanged: (isi) {
+              var i = isi;
+              listcoba[index]['angka'] = i;
+            },
+            decoration: InputDecoration(
+                suffixIcon: GestureDetector(
+                    onTap: () {
+                      print(listcoba[index]['angka']);
+                    },
+                    child: Icon(
+                      Icons.print,
+                      color: Colors.blue,
+                    ))),
+          ),
+        ),
+      ],
+    );
   }
 }

@@ -28,7 +28,6 @@ dev_dependencies:
 flutter_icons:
   android: true
   ios: true
-  # image: "assets/logo/logo.png" 
   image_path: "assets/logo/logo.png" 
 
 flutter:

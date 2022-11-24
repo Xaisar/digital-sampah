@@ -1,7 +1,7 @@
 import 'package:get/get.dart';
 
-class PengambilanController extends GetxController {
-  //TODO: Implement PengambilanController
+class RiwayatPengambilanController extends GetxController {
+  //TODO: Implement RiwayatPengambilanController
 
   final count = 0.obs;
   @override

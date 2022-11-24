@@ -1,8 +1,7 @@
 import 'package:get/get.dart';
-import 'package:digital_sampah/app/modules/paymentpage/bindings/paymentpage_binding.dart';
-import 'package:digital_sampah/app/modules/paymentpage/views/paymentpage_view.dart';
-import 'package:digital_sampah/app/modules/pemayaran/bindings/pemayaran_binding.dart';
-import 'package:digital_sampah/app/modules/pemayaran/views/pemayaran_view.dart';
+
+import '../modules/Pengambilan/bindings/pengambilan_binding.dart';
+import '../modules/Pengambilan/views/pengambilan_view.dart';
 import '../modules/bantuan/bindings/bantuan_binding.dart';
 import '../modules/bantuan/views/bantuan_view.dart';
 import '../modules/hargaSampah/bindings/harga_sampah_binding.dart';
@@ -19,10 +18,14 @@ import '../modules/login/bindings/login_binding.dart';
 import '../modules/login/views/login_view.dart';
 import '../modules/lupaPassword/bindings/lupa_password_binding.dart';
 import '../modules/lupaPassword/views/lupa_password_view.dart';
-import '../modules/pengambilan/bindings/pengambilan_binding.dart';
-import '../modules/pengambilan/views/pengambilan_view.dart';
+import '../modules/paymentpage/bindings/paymentpage_binding.dart';
+import '../modules/paymentpage/views/paymentpage_view.dart';
+import '../modules/pemayaran/bindings/pemayaran_binding.dart';
+import '../modules/pemayaran/views/pemayaran_view.dart';
 import '../modules/riwayat/bindings/riwayat_binding.dart';
 import '../modules/riwayat/views/riwayat_view.dart';
+import '../modules/riwayatPengambilan/bindings/riwayat_pengambilan_binding.dart';
+import '../modules/riwayatPengambilan/views/riwayat_pengambilan_view.dart';
 import '../modules/statistikNasabah/bindings/statistiknasabah_binding.dart';
 import '../modules/statistikNasabah/views/statistiknasabah_view.dart';
 import '../modules/transaksi/bindings/transaksi_binding.dart';
@@ -82,11 +85,6 @@ class AppPages {
       binding: JadwalBinding(),
     ),
     GetPage(
-      name: _Paths.PENGAMBILAN,
-      page: () => const PengambilanView(),
-      binding: PengambilanBinding(),
-    ),
-    GetPage(
       name: _Paths.BANTUAN,
       page: () => BantuanView(),
       binding: BantuanBinding(),
@@ -105,6 +103,16 @@ class AppPages {
       name: _Paths.PEMAYARAN,
       page: () => const PemayaranView(),
       binding: PemayaranBinding(),
-    )
+    ),
+    GetPage(
+      name: _Paths.PENGAMBILAN,
+      page: () => PengambilanView(),
+      binding: PengambilanBinding(),
+    ),
+    GetPage(
+      name: _Paths.RIWAYAT_PENGAMBILAN,
+      page: () => RiwayatPengambilanView(),
+      binding: RiwayatPengambilanBinding(),
+    ),
   ];
 }
