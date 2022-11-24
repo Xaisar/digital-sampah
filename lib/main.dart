@@ -5,8 +5,8 @@ import 'package:digital_sampah/app/modules/jadwal/views/jadwal_view.dart';
 import 'package:digital_sampah/app/modules/pemayaran/views/pemayaran_view.dart';
 import 'package:digital_sampah/app/modules/report/views/report_view.dart';
 import 'package:digital_sampah/app/modules/transaksi/views/transaksi_view.dart';
-import 'package:digital_sampah/widgets/report.dart';
 import 'package:digital_sampah/widgets/splash.dart';
+import 'package:digital_sampah/ujicoba.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'app/routes/app_pages.dart';
@@ -22,7 +22,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
-      home: HomePage(),
+      home: BantuanView(),
     );
     return FutureBuilder(
       future: Future.delayed(Duration(seconds: 5)),
