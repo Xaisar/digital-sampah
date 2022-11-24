@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 class MyCards extends StatelessWidget {
   final double balance;
-  final int cardNumber;
+  final String cardNumber;
   final String Dawis1;
   // final color;
 
@@ -26,10 +26,7 @@ class MyCards extends StatelessWidget {
           gradient: LinearGradient(
                colors: [
                  Color(0xff1DBA3F),
-                 Color(0xff025113),
-
-                          ],
-                        ),
+                 Color(0xff025113), ], ),
           borderRadius: BorderRadius.circular(16),
         ),
         child: Column(
@@ -45,9 +42,11 @@ class MyCards extends StatelessWidget {
                     color: Colors.white,
                   ),
                 ),
-                Image.asset(
-                  "assets/icons/logo.png",
-                  height: 35,
+                Text(
+                  "Anggota",
+                  style: TextStyle(
+                    color: Colors.white,
+                  ),
                 ),
               ],
             ),
