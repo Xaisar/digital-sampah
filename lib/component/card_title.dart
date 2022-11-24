@@ -7,6 +7,7 @@ class MyCard extends StatelessWidget {
   final String Alamat;
   final String TitleHariPenjemputan;
   final String TanggalJoin;
+  final String iconUser;
   // final color1;
 
   const MyCard({
@@ -17,6 +18,7 @@ class MyCard extends StatelessWidget {
     required this.Alamat,
     required this.TitleHariPenjemputan,
     required this.TanggalJoin,
+    required this.iconUser,
     // required this.color1,
   });
 
@@ -65,9 +67,13 @@ class MyCard extends StatelessWidget {
                               // fontWeight: FontWeight.bold,
                             ),
                           ),
+                          Image.asset(
+                            iconUser,
+                            height: 35,
+                          ),
                         ],
                       ),
-                      SizedBox(height: 10),
+                      SizedBox(height: 5),
                       Text(
                         Ttl,
                         style: TextStyle(
@@ -77,7 +83,7 @@ class MyCard extends StatelessWidget {
                         ),
                       ),
                       SizedBox(
-                        height: 10,
+                        height: 5,
                       ),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -92,31 +98,30 @@ class MyCard extends StatelessWidget {
                           ),
                         ],
                       ),
-                      SizedBox(height: 10),
+                      SizedBox(height: 5),
                       Divider(
                         color: Colors.black,
                       ),
                       SizedBox(height: 5),
                       RichText(
                         text: TextSpan(
-                          text: "Pengambilan Sampah ",
-                          style: TextStyle(
-                            color: Colors.white,
-                            fontSize: 16,
-                          ),
+                          // text: "Pengambilan Sampah ",
+                          // style: TextStyle(
+                          //   color: Colors.white,
+                          //   fontSize: 16,
+                          // ),
                           children: [
                             TextSpan(
                               text: TitleHariPenjemputan,
                               style: TextStyle(
                                 color: Colors.white,
                                 fontSize: 16,
-                                fontWeight: FontWeight.bold,
                               ),
                             ),
                           ],
                         ),
                       ),
-                      SizedBox(height: 15),
+                      SizedBox(height: 10),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [

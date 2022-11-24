@@ -1,4 +1,5 @@
 import 'package:digital_sampah/app/modules/pemayaran/views/pemayaran_view.dart';
+import 'package:digital_sampah/app/modules/report/views/report_view.dart';
 import 'package:digital_sampah/component/card_title.dart';
 import 'package:digital_sampah/component/my_button.dart';
 import 'package:digital_sampah/component/my_card.dart';
@@ -40,18 +41,20 @@ class _HomePageState extends State<HomePage> {
                 children: [
                   MyCards(
                     balance: 258543,
-                    cardNumber: 3213125205680006,
+                    cardNumber: '007',
                     Dawis1: "Dawis001",
                     // color: Colors.deepPurple[300],
                   ),
                   MyCard(
-                      // color1: Colors.green[400],
-                      Nama: "Mohamad Aji Hermansya",
-                      User: "Anggota",
-                      Ttl: "Banyuwangi, 23 Februari 2004",
-                      Alamat: "Dusun Tambong",
-                      TitleHariPenjemputan: "Hari Juma't",
-                      TanggalJoin: "23/01/2010"),
+                    // color1: Colors.green[400],
+                    Nama: "Mohamad Aji Hermansya",
+                    User: "",
+                    Ttl: "Banyuwangi, 23 Februari 2004",
+                    Alamat: "Dusun Tambong",
+                    TitleHariPenjemputan: "Pengambilan Sampah Hari Juma't",
+                    TanggalJoin: "23/01/2010",
+                    iconUser: "assets/icons/logo.png",
+                  ),
                 ],
               ),
             ),
@@ -71,7 +74,7 @@ class _HomePageState extends State<HomePage> {
                   //sendbutton
                   MyButton(
                     iconImagePath: "assets/icons/send.png",
-                    butoonText: "Harga Sampah",
+                    butoonText: "   Harga \n Sampah",
                     onPressed: () {
                       Get.toNamed(Routes.HARGA_SAMPAH);
                     },
@@ -86,8 +89,8 @@ class _HomePageState extends State<HomePage> {
                   ),
                   //bills button
                   MyButton(
-                    iconImagePath: "assets/icons/listrik.png",
-                    butoonText: "Listrik",
+                    iconImagePath: "assets/icons/mobile-transfer.png",
+                    butoonText: "Transaksi",
                     onPressed: () {
                       Get.to(() => PemayaranView());
                     },
@@ -96,7 +99,7 @@ class _HomePageState extends State<HomePage> {
               ),
             ),
 
-            SizedBox(height: 13),
+            SizedBox(height: 15),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 35.0),
               child: Row(
@@ -104,21 +107,13 @@ class _HomePageState extends State<HomePage> {
                 children: [
                   //sendbutton
                   MyButton(
-                    iconImagePath: "assets/icons/air.png",
-                    butoonText: "Air",
+                    iconImagePath: "assets/icons/statistics.png",
+                    butoonText: "Statistik",
                     onPressed: () {
-                      Get.to(() => PemayaranView());
+                      Get.to(() => PageDevelope());
                     },
                   ),
                   //paybutton
-                  MyButton(
-                    iconImagePath: "assets/icons/pbb.png",
-                    butoonText: "PBB",
-                    onPressed: () {
-                      Get.to(() => PemayaranView());
-                    },
-                  ),
-                  //bills button
                   MyButton(
                     iconImagePath: "assets/icons/bantuan.png",
                     butoonText: "Bantuan",
@@ -126,46 +121,15 @@ class _HomePageState extends State<HomePage> {
                       Get.toNamed(Routes.BANTUAN);
                     },
                   ),
+                  //bills button
+                  MyButton(
+                    iconImagePath: "assets/icons/sheet.png",
+                    butoonText: "Report",
+                    onPressed: () {
+                      Get.to(() => Report());
+                    },
+                  ),
                 ],
-              ),
-            ),
-            SizedBox(height: 15),
-            //column -> stats + transaction
-
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 25.0),
-              child: Container(
-                // width: 300,
-                padding: EdgeInsets.all(10),
-                decoration: BoxDecoration(
-                  color: Colors.white,
-                  borderRadius: BorderRadius.circular(16),
-                ),
-                child: Column(
-                  children: [
-                    //statistics
-                    MyListTile(
-                        iconImagePath: "assets/icons/mobile-transfer.png",
-                        tileName: "Transactions",
-                        tileSubName: "Transaction History",
-                        route: () {
-                          Get.toNamed(Routes.TRANSAKSI);
-                        }),
-
-                    //transaction
-                    // SizedBox(height: 10),
-                    Divider(
-                      color: Colors.grey[700],
-                    ),
-                    MyListTile(
-                        iconImagePath: "assets/icons/statistics.png",
-                        tileName: "Statistics",
-                        tileSubName: "Payments and Icome",
-                        route: () {
-                          Get.to(() => PageDevelope());
-                        }),
-                  ],
-                ),
               ),
             ),
 
@@ -180,10 +144,6 @@ class _HomePageState extends State<HomePage> {
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        // Image.asset(
-                        //   'assets/images/event.png',
-                        //   height: 60,
-                        // ),
                         const SizedBox(
                           height: 8,
                         ),
