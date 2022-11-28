@@ -87,15 +87,15 @@ class _HomePetugasViewState extends State<HomePetugasView> {
                     iconImagePath: "assets/icons/riwayat.png",
                     butoonText: "Riwayat",
                     onPressed: () {
-                      Get.toNamed(Routes.RIWAYAT);
+                      Get.toNamed(Routes.RIWAYAT_PENGAMBILAN);
                     },
                   ),
                   //bills button
                   MyButton(
-                    iconImagePath: "assets/icons/mobile-transfer.png",
-                    butoonText: "Transaksi",
+                    iconImagePath: "assets/icons/report.png",
+                    butoonText: "Pengambilan \n Sampah",
                     onPressed: () {
-                      Get.to(() => PemayaranView());
+                      Get.toNamed(Routes.PENGAMBILAN);
                     },
                   ),
                 ],

@@ -99,7 +99,10 @@ class DetailPengambilanView extends GetView {
                   margin: EdgeInsets.only(bottom: 10),
                   child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [Text('Sampah'), Text('Total')]),
+                      children: [
+                        Text('Sampah', style: TextStyle(fontSize: 16)),
+                        Text('Total', style: TextStyle(fontSize: 16))
+                      ]),
                 ),
                 Flexible(
                   fit: FlexFit.tight,

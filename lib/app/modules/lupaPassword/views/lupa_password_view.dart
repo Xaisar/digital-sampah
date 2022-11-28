@@ -57,11 +57,11 @@ class LupaPasswordView extends GetView<LupaPasswordController> {
                                 top: 30, left: 30, right: 30),
                             child: Column(children: [
                               // NIK field
-                              nik(),
+                              noNasabah(),
                               //Nama Field
                               nama(),
                               //Tanggal Lahir Field
-                              tanggalLahir(),
+                              // tanggalLahir(),
                             ]),
                           ),
                         ],
@@ -81,7 +81,7 @@ class LupaPasswordView extends GetView<LupaPasswordController> {
     );
   }
 
-  nik() {
+  noNasabah() {
     return Container(
         margin: const EdgeInsets.only(bottom: 15),
         child: Column(children: [
@@ -89,7 +89,7 @@ class LupaPasswordView extends GetView<LupaPasswordController> {
             alignment: Alignment.centerLeft,
             margin: const EdgeInsets.only(bottom: 10),
             child: const Text(
-              'NIK',
+              'Username',
               textAlign: TextAlign.left,
               style: TextStyle(fontSize: 18),
             ),
@@ -104,7 +104,7 @@ class LupaPasswordView extends GetView<LupaPasswordController> {
               decoration: InputDecoration(
                 border: OutlineInputBorder(
                     borderRadius: BorderRadius.all(Radius.circular(20))),
-                hintText: 'Input NIK',
+                hintText: 'Input Username',
                 focusColor: Colors.white,
               ),
             ),
@@ -143,36 +143,36 @@ class LupaPasswordView extends GetView<LupaPasswordController> {
         ]));
   }
 
-  tanggalLahir() {
-    return Container(
-        margin: const EdgeInsets.only(bottom: 15),
-        child: Column(children: [
-          Container(
-            alignment: Alignment.centerLeft,
-            margin: const EdgeInsets.only(bottom: 10),
-            child: const Text(
-              'Tanggal Lahir',
-              textAlign: TextAlign.left,
-              style: TextStyle(fontSize: 18),
-            ),
-          ),
-          Container(
-            decoration: BoxDecoration(
-              color: Colors.white,
-              borderRadius: BorderRadius.all(Radius.circular(20)),
-            ),
-            child: const TextField(
-              keyboardType: TextInputType.datetime,
-              decoration: InputDecoration(
-                border: OutlineInputBorder(
-                    borderRadius: BorderRadius.all(Radius.circular(20))),
-                hintText: 'Example: 12-12-2012',
-                focusColor: Colors.white,
-              ),
-            ),
-          ),
-        ]));
-  }
+  // tanggalLahir() {
+  //   return Container(
+  //       margin: const EdgeInsets.only(bottom: 15),
+  //       child: Column(children: [
+  //         Container(
+  //           alignment: Alignment.centerLeft,
+  //           margin: const EdgeInsets.only(bottom: 10),
+  //           child: const Text(
+  //             'Tanggal Lahir',
+  //             textAlign: TextAlign.left,
+  //             style: TextStyle(fontSize: 18),
+  //           ),
+  //         ),
+  //         Container(
+  //           decoration: BoxDecoration(
+  //             color: Colors.white,
+  //             borderRadius: BorderRadius.all(Radius.circular(20)),
+  //           ),
+  //           child: const TextField(
+  //             keyboardType: TextInputType.datetime,
+  //             decoration: InputDecoration(
+  //               border: OutlineInputBorder(
+  //                   borderRadius: BorderRadius.all(Radius.circular(20))),
+  //               hintText: 'Example: 12-12-2012',
+  //               focusColor: Colors.white,
+  //             ),
+  //           ),
+  //         ),
+  //       ]));
+  // }
 
   tombolKonfirmasi(context) {
     return Container(

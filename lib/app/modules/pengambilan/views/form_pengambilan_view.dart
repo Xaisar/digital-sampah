@@ -1,3 +1,5 @@
+import 'package:digital_sampah/app/modules/Pengambilan/views/detail_pengambilan_view.dart';
+import 'package:digital_sampah/app/modules/riwayatPengambilan/views/detail_riwayat_view.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -234,12 +236,10 @@ class FormPengambilanView extends GetView {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Flexible(
-                        child: SizedBox(
+                    SizedBox(
                       height: 55,
-                      width: Get.width * 0.3,
+                      width: Get.width * 0.65,
                       child: TextField(
-                        textAlign: TextAlign.center,
                         style: TextStyle(fontSize: 18),
                         keyboardType: TextInputType.number,
                         // onChange: (username) {
@@ -256,22 +256,22 @@ class FormPengambilanView extends GetView {
                           focusColor: Colors.white,
                         ),
                       ),
-                    )),
-                    Flexible(
-                      child: Container(
-                        padding: EdgeInsets.all(5),
-                        width: Get.width * 0.55,
-                        height: 55,
-                        alignment: Alignment.centerLeft,
-                        decoration: BoxDecoration(
-                            borderRadius: BorderRadius.all(Radius.circular(10)),
-                            border: Border.all(color: Colors.grey)),
-                        child: Text(
-                          "Total: Rp." + total.value.toString(),
-                          style: TextStyle(fontSize: 13),
-                        ),
-                      ),
                     ),
+                    // Flexible(
+                    //   child: Container(
+                    //     padding: EdgeInsets.all(5),
+                    //     width: Get.width * 0.55,
+                    //     height: 55,
+                    //     alignment: Alignment.centerLeft,
+                    //     decoration: BoxDecoration(
+                    //         borderRadius: BorderRadius.all(Radius.circular(10)),
+                    //         border: Border.all(color: Colors.grey)),
+                    //     child: Text(
+                    //       "Total: Rp." + total.value.toString(),
+                    //       style: TextStyle(fontSize: 13),
+                    //     ),
+                    //   ),
+                    // ),
                     Flexible(
                         child: SizedBox(
                       height: 50,
@@ -329,7 +329,7 @@ class FormPengambilanView extends GetView {
               backgroundColor: Color(0xFF1AD443),
               shape: RoundedRectangleBorder(borderRadius: BorderRadius.zero)),
           onPressed: () {
-            print(id);
+            Get.to(DetailPengambilanView());
           },
           child: Text(
             "Next",

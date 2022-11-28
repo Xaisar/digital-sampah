@@ -11,11 +11,11 @@ import '../controllers/login_controller.dart';
 class LoginView extends GetView<LoginController> {
   final passwordC = Get.put(HidePasswordController1());
   final accountC = Get.put(AccountController());
-  final Username = '';
-  final Password = '';
+  String username1 = '';
+  String password1 = '';
   final List<Map<String, dynamic>> kontakBantuan = [
-    {'Name': 'Stranger', 'Nomor': '+6285212568455'},
-    {'Name': 'Aji', 'Nomor': '+6281334967376'}
+    {'Name': '', 'Nomor': '+6282350599316'},
+    {'Name': '', 'Nomor': '+6281334111111'}
   ];
   @override
   Widget build(BuildContext context) {
@@ -120,9 +120,9 @@ class LoginView extends GetView<LoginController> {
                 borderRadius: BorderRadius.all(Radius.circular(20)),
               ),
               child: TextField(
-                // onSubmitted: (username) {
-                //   accountC.verify.value?
-                // },
+                onChanged: (username) {
+                  username1 = username;
+                },
                 decoration: InputDecoration(
                   border: OutlineInputBorder(
                       borderRadius: BorderRadius.all(Radius.circular(20))),
@@ -161,6 +161,9 @@ class LoginView extends GetView<LoginController> {
                   obscureText: passwordC.password.passwordverify.value,
                   autofocus: false,
                   keyboardType: TextInputType.text,
+                  onChanged: (password) {
+                    password1 = password;
+                  },
                   decoration: InputDecoration(
                       border: OutlineInputBorder(
                           borderRadius: BorderRadius.all(Radius.circular(20))),
@@ -207,8 +210,15 @@ class LoginView extends GetView<LoginController> {
       child: ElevatedButton(
         style: TextButton.styleFrom(backgroundColor: Color(0xff1AD443)),
         onPressed: () {
-          Navigator.pushReplacement(
-              context, MaterialPageRoute(builder: (context) => HomePage()));
+          (username1 == '1' && password1 == '1'
+              ? Get.offAllNamed(Routes.HOME_PETUGAS)
+              : username1 == '2' && password1 == '2'
+                  ? Get.offAllNamed(Routes.HOME_PAGE)
+                  : AlertDialog(
+                      content: Container(
+                          color: Colors.blue,
+                          child: Text('user tidak dapat ditemukan')),
+                    ));
         },
         // onPressed: () {
         //   accountC.isset();

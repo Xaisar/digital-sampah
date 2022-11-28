@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:digital_sampah/app/routes/app_pages.dart';
 
 class MyButton extends StatelessWidget {
   final String iconImagePath;
@@ -49,6 +50,7 @@ class MyButton extends StatelessWidget {
         //text
         Text(
           butoonText,
+          textAlign: TextAlign.center,
           style: TextStyle(
             fontSize: 13,
             fontWeight: FontWeight.bold,
