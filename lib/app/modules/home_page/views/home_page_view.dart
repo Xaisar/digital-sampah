@@ -74,7 +74,7 @@ class _HomePageState extends State<HomePage> {
                   //sendbutton
                   MyButton(
                     iconImagePath: "assets/icons/send.png",
-                    butoonText: "   Harga \n Sampah",
+                    butoonText: " Harga \n Sampah",
                     onPressed: () {
                       Get.toNamed(Routes.HARGA_SAMPAH);
                     },
@@ -115,18 +115,17 @@ class _HomePageState extends State<HomePage> {
                   ),
                   //paybutton
                   MyButton(
-                    iconImagePath: "assets/icons/bantuan.png",
-                    butoonText: "Bantuan",
-                    onPressed: () {
-                      Get.toNamed(Routes.BANTUAN);
-                    },
-                  ),
-                  //bills button
-                  MyButton(
                     iconImagePath: "assets/icons/sheet.png",
                     butoonText: "Report",
                     onPressed: () {
                       Get.to(() => Report());
+                    },
+                  ),
+                  MyButton(
+                    iconImagePath: "assets/icons/shutdown.png",
+                    butoonText: "Keluar",
+                    onPressed: () {
+                      Get.offAllNamed(Routes.LOGIN);
                     },
                   ),
                 ],
