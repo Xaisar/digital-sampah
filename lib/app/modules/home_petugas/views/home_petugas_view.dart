@@ -41,29 +41,29 @@ class HomePetugasView extends GetView<HomePetugasController> {
                     User: "",
                     Ttl: "Banyuwangi, 23 April 2002",
                     Alamat: "Dusun Tambong",
-                    TitleHariPenjemputan: "Rt02/Rw03",
-                    TanggalJoin: "Link. Krajan Wetan",
+                    TitleHariPenjemputan: "Pengangkut",
+                    TanggalJoin: "Banyuwangi, Jawa Timur",
                     iconUser: "assets/icons/logo.png",
                   ),
-                  MyCard(
-                    // color1: Colors.green[400],
-                    Nama: "Petugas",
-                    User: "",
-                    Ttl: "Banyuwangi, 23 April 2002",
-                    Alamat: "Dusun Tambong",
-                    TitleHariPenjemputan: "Cek Berkala Untuk Jadwal",
-                    TanggalJoin: "Penjemputan Sampah",
-                    iconUser: "assets/icons/logo.png",
-                  ),
+                  // MyCard(
+                  //   // color1: Colors.green[400],
+                  //   Nama: "Petugas",
+                  //   User: "",
+                  //   Ttl: "Banyuwangi, 23 April 2002",
+                  //   Alamat: "Dusun Tambong",
+                  //   TitleHariPenjemputan: "Cek Berkala Untuk Jadwal",
+                  //   TanggalJoin: "Penjemputan Sampah",
+                  //   iconUser: "assets/icons/logo.png",
+                  // ),
                 ],
               ),
             ),
             SizedBox(height: 25),
-            SmoothPageIndicator(
-              controller: _controller,
-              count: 2,
-              effect: ExpandingDotsEffect(activeDotColor: Colors.grey.shade800),
-            ),
+            // SmoothPageIndicator(
+            //   controller: _controller,
+            //   count: 2,
+            //   effect: ExpandingDotsEffect(activeDotColor: Colors.grey.shade800),
+            // ),
             SizedBox(height: 20),
             //3 buttons -> send + pay +bill
             Padding(
@@ -113,20 +113,21 @@ class HomePetugasView extends GetView<HomePetugasController> {
                       Get.to(() => PageDevelope());
                     },
                   ),
-                  //paybutton
-                  MyButton(
-                    iconImagePath: "assets/icons/bantuan.png",
-                    butoonText: "Bantuan",
-                    onPressed: () {
-                      Get.toNamed(Routes.BANTUAN);
-                    },
-                  ),
+
                   //bills button
                   MyButton(
                     iconImagePath: "assets/icons/sheet.png",
                     butoonText: "Report",
                     onPressed: () {
                       Get.to(() => Report());
+                    },
+                  ),
+
+                  MyButton(
+                    iconImagePath: "assets/icons/shutdown.png",
+                    butoonText: "Keluar",
+                    onPressed: () {
+                      Get.offAllNamed(Routes.LOGIN);
                     },
                   ),
                 ],
