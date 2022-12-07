@@ -17,12 +17,59 @@ class FormPengambilanView extends GetView {
     {'Id': "3", 'NoNasabah': '2213355', 'Nama': "Jokowi"},
     {'Id': "4", 'NoNasabah': '2344456', 'Nama': "Joko"},
     {'Id': "5", 'NoNasabah': '1223456', 'Nama': "Werdi"},
+    {'Id': "6", 'NoNasabah': '7654726', 'Nama': "Paijo"},
+    {'Id': "7", 'NoNasabah': '8654632', 'Nama': "Samsudin"},
+    {'Id': "8", 'NoNasabah': '2213355', 'Nama': "Jokowi"},
+    {'Id': "9", 'NoNasabah': '2344456', 'Nama': "Joko"},
+    {'Id': "10", 'NoNasabah': '1223456', 'Nama': "Werdi"},
+    {'Id': "11", 'NoNasabah': '7654726', 'Nama': "Paijo"},
+    {'Id': "12", 'NoNasabah': '8654632', 'Nama': "Samsudin"},
+    {'Id': "13", 'NoNasabah': '2213355', 'Nama': "Jokowi"},
+    {'Id': "14", 'NoNasabah': '2344456', 'Nama': "Joko"},
+    {'Id': "15", 'NoNasabah': '1223456', 'Nama': "Werdi"},
+    {'Id': "16", 'NoNasabah': '7654726', 'Nama': "Paijo"},
+    {'Id': "17", 'NoNasabah': '8654632', 'Nama': "Samsudin"},
+    {'Id': "18", 'NoNasabah': '2213355', 'Nama': "Jokowi"},
+    {'Id': "19", 'NoNasabah': '2344456', 'Nama': "Joko"},
+    {'Id': "20", 'NoNasabah': '1223456', 'Nama': "Werdi"},
+    {'Id': "21", 'NoNasabah': '7654726', 'Nama': "Paijo"},
+    {'Id': "22", 'NoNasabah': '8654632', 'Nama': "Samsudin"},
+    {'Id': "23", 'NoNasabah': '2213355', 'Nama': "Jokowi"},
+    {'Id': "24", 'NoNasabah': '2344456', 'Nama': "Joko"},
+    {'Id': "25", 'NoNasabah': '1223456', 'Nama': "Werdi"},
+    {'Id': "26", 'NoNasabah': '7654726', 'Nama': "Paijo"},
+    {'Id': "27", 'NoNasabah': '8654632', 'Nama': "Samsudin"},
+    {'Id': "28", 'NoNasabah': '2213355', 'Nama': "Jokowi"},
+    {'Id': "29", 'NoNasabah': '2344456', 'Nama': "Joko"},
+    {'Id': "30", 'NoNasabah': '1223456', 'Nama': "Werdi"},
+    {'Id': "31", 'NoNasabah': '7654726', 'Nama': "Paijo"},
+    {'Id': "32", 'NoNasabah': '8654632', 'Nama': "Samsudin"},
+    {'Id': "33", 'NoNasabah': '2213355', 'Nama': "Jokowi"},
+    {'Id': "34", 'NoNasabah': '2344456', 'Nama': "Joko"},
+    {'Id': "35", 'NoNasabah': '1223456', 'Nama': "Werdi"},
+    {'Id': "36", 'NoNasabah': '7654726', 'Nama': "Paijo"},
+    {'Id': "37", 'NoNasabah': '8654632', 'Nama': "Samsudin"},
+    {'Id': "38", 'NoNasabah': '2213355', 'Nama': "Jokowi"},
+    {'Id': "39", 'NoNasabah': '2344456', 'Nama': "Joko"},
+    {'Id': "40", 'NoNasabah': '1223456', 'Nama': "Werdi"},
   ];
   List<Map<String, dynamic>> daftarPengambilanSampah = [
-    {'Id': "", 'Nama': "", 'Berat': 0}
+    {'Id': "", 'Nama': "", 'Berat': 0, 'satuan': ""}
   ].obs;
 
-  List<int> listidnasabah = [0, 1, 2, 3, 4];
+  List<int> listidnasabah = [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+  ];
   List<int> listidsampah = [0, 1, 2, 3];
 
   RxString nama = "".obs;
@@ -213,7 +260,7 @@ class FormPengambilanView extends GetView {
                                 ),
                               ],
                             ),
-                            value: nasabah[e]['Id']);
+                            value: daftarSampah[e]['Id']);
                       }).toList(),
                       onChanged: (val) {
                         id.value = val.toString();
@@ -236,58 +283,48 @@ class FormPengambilanView extends GetView {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    SizedBox(
-                      height: 55,
-                      width: Get.width * 0.65,
-                      child: TextField(
-                        style: TextStyle(fontSize: 18),
-                        keyboardType: TextInputType.number,
-                        // onChange: (username) {
-                        //   accountC.verify.value?
-                        // },
-                        decoration: InputDecoration(
-                          labelText: "Berat Sampah",
-                          labelStyle: TextStyle(fontSize: 13),
-                          border: OutlineInputBorder(
-                              borderRadius:
-                                  BorderRadius.all(Radius.circular(10))),
-                          hintText: 'Input Berat Sampah',
-                          hintStyle: TextStyle(fontSize: 13),
-                          focusColor: Colors.white,
+                    Flexible(
+                      flex: 2,
+                      child: SizedBox(
+                        height: 55,
+                        width: Get.width * 0.65,
+                        child: TextField(
+                          style: TextStyle(fontSize: 18),
+                          keyboardType: TextInputType.number,
+                          // onChange: (username) {
+                          //   accountC.verify.value?
+                          // },
+                          decoration: InputDecoration(
+                            labelText: "Berat Sampah",
+                            labelStyle: TextStyle(fontSize: 13),
+                            border: OutlineInputBorder(
+                                borderRadius:
+                                    BorderRadius.all(Radius.circular(10))),
+                            hintText: 'Input Berat Sampah',
+                            hintStyle: TextStyle(fontSize: 13),
+                            focusColor: Colors.white,
+                          ),
                         ),
                       ),
                     ),
-                    // Flexible(
-                    //   child: Container(
-                    //     padding: EdgeInsets.all(5),
-                    //     width: Get.width * 0.55,
-                    //     height: 55,
-                    //     alignment: Alignment.centerLeft,
-                    //     decoration: BoxDecoration(
-                    //         borderRadius: BorderRadius.all(Radius.circular(10)),
-                    //         border: Border.all(color: Colors.grey)),
-                    //     child: Text(
-                    //       "Total: Rp." + total.value.toString(),
-                    //       style: TextStyle(fontSize: 13),
-                    //     ),
-                    //   ),
-                    // ),
                     Flexible(
+                        flex: 1,
                         child: SizedBox(
-                      height: 50,
-                      width: Get.width * 0.25,
-                      child: ElevatedButton(
-                        style:
-                            TextButton.styleFrom(backgroundColor: Colors.red),
-                        onPressed: () {
-                          daftarPengambilanSampah.removeAt(index);
-                        },
-                        child: const Text(
-                          'Hapus',
-                          style: TextStyle(fontSize: 16, color: Colors.white),
-                        ),
-                      ),
-                    ))
+                          height: 50,
+                          width: Get.width * 0.25,
+                          child: ElevatedButton(
+                            style: TextButton.styleFrom(
+                                backgroundColor: Colors.red),
+                            onPressed: () {
+                              daftarPengambilanSampah.removeAt(index);
+                            },
+                            child: const Text(
+                              'Hapus',
+                              style:
+                                  TextStyle(fontSize: 16, color: Colors.white),
+                            ),
+                          ),
+                        ))
                   ],
                 ),
               )
@@ -300,7 +337,7 @@ class FormPengambilanView extends GetView {
                 alignment: Alignment.topCenter,
                 child: SizedBox(
                   width: Get.width * 0.95,
-                  height: 50,
+                  height: 40,
                   child: ElevatedButton(
                     style:
                         TextButton.styleFrom(backgroundColor: Colors.blue[500]),

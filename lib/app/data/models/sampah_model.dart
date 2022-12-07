@@ -1,14 +1,14 @@
 class Sampah {
   String? id;
-  String? name;
+  String? nama;
   String? satuan;
   int? harga;
 
-  Sampah({this.id, this.name, this.satuan, this.harga});
+  Sampah({this.id, this.nama, this.satuan, this.harga});
 
   Sampah.fromJson(Map<String, dynamic> json) {
     id = json['id'];
-    name = json['name'];
+    nama = json['nama'];
     satuan = json['satuan'];
     harga = json['harga'];
   }
@@ -16,7 +16,7 @@ class Sampah {
   Map<String, dynamic> toJson() {
     final data = <String, dynamic>{};
     data['id'] = id;
-    data['name'] = name;
+    data['nama'] = nama;
     data['satuan'] = satuan;
     data['harga'] = harga;
     return data;

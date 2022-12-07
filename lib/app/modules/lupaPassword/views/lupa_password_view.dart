@@ -2,13 +2,17 @@ import 'package:digital_sampah/app/modules/lupaPassword/views/ganti_password_vie
 import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
+import 'package:get_cli/functions/version/print_get_cli.dart';
 
 import '../controllers/lupa_password_controller.dart';
 
 class LupaPasswordView extends GetView<LupaPasswordController> {
-  const LupaPasswordView({Key? key}) : super(key: key);
+  LupaPasswordView({Key? key}) : super(key: key);
+  final lupaPasswordC = LupaPasswordController();
   @override
   Widget build(BuildContext context) {
+    lupaPasswordC.role.value = Get.arguments!;
+
     return Scaffold(
       resizeToAvoidBottomInset: false,
       body: Stack(
@@ -61,7 +65,7 @@ class LupaPasswordView extends GetView<LupaPasswordController> {
                               //Nama Field
                               nama(),
                               //Tanggal Lahir Field
-                              // tanggalLahir(),
+                              tanggalLahir(),
                             ]),
                           ),
                         ],
@@ -131,7 +135,7 @@ class LupaPasswordView extends GetView<LupaPasswordController> {
               borderRadius: BorderRadius.all(Radius.circular(20)),
             ),
             child: const TextField(
-              keyboardType: TextInputType.text,
+              keyboardType: TextInputType.name,
               decoration: InputDecoration(
                 border: OutlineInputBorder(
                     borderRadius: BorderRadius.all(Radius.circular(20))),
@@ -143,36 +147,36 @@ class LupaPasswordView extends GetView<LupaPasswordController> {
         ]));
   }
 
-  // tanggalLahir() {
-  //   return Container(
-  //       margin: const EdgeInsets.only(bottom: 15),
-  //       child: Column(children: [
-  //         Container(
-  //           alignment: Alignment.centerLeft,
-  //           margin: const EdgeInsets.only(bottom: 10),
-  //           child: const Text(
-  //             'Tanggal Lahir',
-  //             textAlign: TextAlign.left,
-  //             style: TextStyle(fontSize: 18),
-  //           ),
-  //         ),
-  //         Container(
-  //           decoration: BoxDecoration(
-  //             color: Colors.white,
-  //             borderRadius: BorderRadius.all(Radius.circular(20)),
-  //           ),
-  //           child: const TextField(
-  //             keyboardType: TextInputType.datetime,
-  //             decoration: InputDecoration(
-  //               border: OutlineInputBorder(
-  //                   borderRadius: BorderRadius.all(Radius.circular(20))),
-  //               hintText: 'Example: 12-12-2012',
-  //               focusColor: Colors.white,
-  //             ),
-  //           ),
-  //         ),
-  //       ]));
-  // }
+  tanggalLahir() {
+    return Container(
+        margin: const EdgeInsets.only(bottom: 15),
+        child: Column(children: [
+          Container(
+            alignment: Alignment.centerLeft,
+            margin: const EdgeInsets.only(bottom: 10),
+            child: const Text(
+              'Tanggal Lahir',
+              textAlign: TextAlign.left,
+              style: TextStyle(fontSize: 18),
+            ),
+          ),
+          Container(
+            decoration: BoxDecoration(
+              color: Colors.white,
+              borderRadius: BorderRadius.all(Radius.circular(20)),
+            ),
+            child: const TextField(
+              keyboardType: TextInputType.datetime,
+              decoration: InputDecoration(
+                border: OutlineInputBorder(
+                    borderRadius: BorderRadius.all(Radius.circular(20))),
+                hintText: 'Example: 12-12-2012',
+                focusColor: Colors.white,
+              ),
+            ),
+          ),
+        ]));
+  }
 
   tombolKonfirmasi(context) {
     return Container(
@@ -184,8 +188,8 @@ class LupaPasswordView extends GetView<LupaPasswordController> {
       child: ElevatedButton(
         style: TextButton.styleFrom(backgroundColor: Color(0xff1AD443)),
         onPressed: () {
-          Navigator.push(context,
-              MaterialPageRoute(builder: (context) => GantiPasswordView()));
+          // Navigator.push(context,
+          //     MaterialPageRoute(builder: (context) => GantiPasswordView()));
         },
         child: const Text(
           'Konfirmasi',

@@ -11,18 +11,15 @@ import 'package:get/get.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 import '../controllers/home_petugas_controller.dart';
 
-class HomePetugasView extends StatefulWidget {
-  const HomePetugasView({super.key});
+class HomePetugasView extends GetView<HomePetugasController> {
+  HomePetugasView({super.key});
 
-  @override
-  State<HomePetugasView> createState() => _HomePetugasViewState();
-}
-
-class _HomePetugasViewState extends State<HomePetugasView> {
   //page controller
   final _controller = PageController();
+  final homePetugasC = HomePetugasController();
   @override
   Widget build(BuildContext context) {
+    homePetugasC.petugas = Get.arguments;
     return Scaffold(
       backgroundColor: Color(0xFFEBF9EE),
       body: SingleChildScrollView(
@@ -40,7 +37,7 @@ class _HomePetugasViewState extends State<HomePetugasView> {
                 children: [
                   MyCard(
                     // color1: Colors.green[400],
-                    Nama: "Ariel Isad",
+                    Nama: "aku siapa",
                     User: "",
                     Ttl: "Banyuwangi, 23 April 2002",
                     Alamat: "Dusun Tambong",

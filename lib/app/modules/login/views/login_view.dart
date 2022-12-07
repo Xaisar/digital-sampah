@@ -1,6 +1,3 @@
-import 'package:digital_sampah/app/models/controller/account_contoller.dart';
-import 'package:digital_sampah/app/models/controller/hidepassword_controller.dart';
-import 'package:digital_sampah/app/modules/home_page/views/home_page_view.dart';
 import 'package:digital_sampah/app/routes/app_pages.dart';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -9,14 +6,8 @@ import 'package:get/get.dart';
 import '../controllers/login_controller.dart';
 
 class LoginView extends GetView<LoginController> {
-  final passwordC = Get.put(HidePasswordController1());
-  final accountC = Get.put(AccountController());
-  String username1 = '';
-  String password1 = '';
-  final List<Map<String, dynamic>> kontakBantuan = [
-    {'Name': '', 'Nomor': '+6282350599316'},
-    {'Name': '', 'Nomor': '+6281334111111'}
-  ];
+  final loginC = LoginController();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -33,37 +24,66 @@ class LoginView extends GetView<LoginController> {
               borderRadius:
                   BorderRadiusDirectional.only(topStart: Radius.circular(50)),
             ),
-            child: Stack(fit: StackFit.expand, children: [
-              Column(
-                children: [
-                  //Tanda Selamat Datang
-                  welcome(),
-                  Container(
-                    alignment: Alignment.topCenter,
-                    margin: const EdgeInsets.only(top: 40, left: 30, right: 30),
-                    // color: Colors.red,
-                    child: Column(children: [
-                      //Username Field
-                      username(),
-                      //Password Field
-                      password(),
-                      //tombol Login
-                      tombol(context)
-                    ]),
-                  )
-                ],
-              ),
-              Column(
-                mainAxisAlignment: MainAxisAlignment.end,
-                mainAxisSize: MainAxisSize.min,
-                children: [
-                  //Konntak Bantuan
-                  helpCenter(context, kontakBantuan)
-                ],
-              )
-            ]),
+            child: Obx(
+              () => Stack(fit: StackFit.expand, children: [
+                Column(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.end,
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: 20, vertical: 25),
+                      child: SizedBox(
+                        height: 40,
+                        width: 90,
+                        child: ElevatedButton(
+                          style: TextButton.styleFrom(
+                              backgroundColor: Colors.blue),
+                          onPressed: () {
+                            (loginC.role.value == "Nasabah"
+                                ? loginC.changeToPetugas()
+                                : loginC.changeToNasabah());
+                          },
+                          child: Text((loginC.role.value == "Nasabah"
+                              ? "Petugas"
+                              : "Nasabah")),
+                        ),
+                      ),
+                    )
+                  ],
+                ),
+                Column(
+                  children: [
+                    //Tanda Selamat Datang
+                    welcome(),
+                    Container(
+                      alignment: Alignment.topCenter,
+                      margin:
+                          const EdgeInsets.only(top: 40, left: 30, right: 30),
+                      // color: Colors.red,
+                      child: Column(children: [
+                        //Username Field
+                        username(),
+                        //Password Field
+                        password(),
+                        //tombol Login
+                        tombol(context)
+                      ]),
+                    )
+                  ],
+                ),
+                Column(
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    //Kon)ntak Bantuan
+                    helpCenter(context, loginC.kontakBantuan)
+                  ],
+                )
+              ]),
+            ),
           ),
-        ),
+        )
       ]),
     );
   }
@@ -87,8 +107,8 @@ class LoginView extends GetView<LoginController> {
       margin: const EdgeInsets.only(
         top: 30,
       ),
-      child: const Text(
-        'Selamat Datang',
+      child: Text(
+        loginC.role.value,
         style: TextStyle(
             color: Colors.black, fontSize: 25, fontWeight: FontWeight.bold),
       ),
@@ -120,8 +140,10 @@ class LoginView extends GetView<LoginController> {
                 borderRadius: BorderRadius.all(Radius.circular(20)),
               ),
               child: TextField(
-                onChanged: (username) {
-                  username1 = username;
+                controller: loginC.usernameC,
+                keyboardType: TextInputType.name,
+                onChanged: (inputUsername) {
+                  loginC.inputUsername(inputUsername);
                 },
                 decoration: InputDecoration(
                   border: OutlineInputBorder(
@@ -157,30 +179,31 @@ class LoginView extends GetView<LoginController> {
               ],
               borderRadius: BorderRadius.all(Radius.circular(20)),
             ),
-            child: Obx(() => TextField(
-                  obscureText: passwordC.password.passwordverify.value,
-                  autofocus: false,
-                  keyboardType: TextInputType.text,
-                  onChanged: (password) {
-                    password1 = password;
-                  },
-                  decoration: InputDecoration(
-                      border: OutlineInputBorder(
-                          borderRadius: BorderRadius.all(Radius.circular(20))),
-                      hintText: 'Input Password',
-                      suffixIcon: GestureDetector(
-                          onTap: () {
-                            passwordC.togglePasswordVisibility1();
-                          },
-                          child: Icon(
-                            passwordC.password.passwordverify.value
-                                ? Icons.visibility_off
-                                : Icons.visibility,
-                            color: passwordC.password.passwordverify.value
-                                ? Colors.grey
-                                : Colors.blue,
-                          ))),
-                )),
+            child: TextField(
+              controller: loginC.passwordC,
+              obscureText: loginC.passwordverify.value,
+              autofocus: false,
+              keyboardType: TextInputType.visiblePassword,
+              onChanged: (inputPassword) {
+                loginC.inputPassword(inputPassword);
+              },
+              decoration: InputDecoration(
+                  border: OutlineInputBorder(
+                      borderRadius: BorderRadius.all(Radius.circular(20))),
+                  hintText: 'Input Password',
+                  suffixIcon: GestureDetector(
+                      onTap: () {
+                        loginC.togglePasswordVisibility();
+                      },
+                      child: Icon(
+                        loginC.passwordverify.value
+                            ? Icons.visibility_off
+                            : Icons.visibility,
+                        color: loginC.passwordverify.value
+                            ? Colors.grey
+                            : Colors.blue,
+                      ))),
+            ),
           ),
           Container(
             alignment: Alignment.centerRight,
@@ -189,11 +212,11 @@ class LoginView extends GetView<LoginController> {
                 style: TextButton.styleFrom(
                   textStyle: const TextStyle(fontSize: 14),
                 ),
-                onPressed: () => Get.toNamed(Routes.LUPA_PASSWORD),
+                onPressed: () => Get.toNamed(Routes.LUPA_PASSWORD,
+                    arguments: loginC.role.value),
                 child: Text(
                   'Lupa Password?',
                   style: TextStyle(
-                      // color: Colors.green[700],
                       color: Colors.black,
                       decoration: TextDecoration.underline),
                 )),
@@ -210,19 +233,8 @@ class LoginView extends GetView<LoginController> {
       child: ElevatedButton(
         style: TextButton.styleFrom(backgroundColor: Color(0xff1AD443)),
         onPressed: () {
-          (username1 == '1' && password1 == '1'
-              ? Get.offAllNamed(Routes.HOME_PETUGAS)
-              : username1 == '2' && password1 == '2'
-                  ? Get.offAllNamed(Routes.HOME_PAGE)
-                  : AlertDialog(
-                      content: Container(
-                          color: Colors.blue,
-                          child: Text('user tidak dapat ditemukan')),
-                    ));
+          loginC.loginRoute(context);
         },
-        // onPressed: () {
-        //   accountC.isset();
-        // },
         child: const Text(
           'Login',
           style: TextStyle(fontSize: 20),

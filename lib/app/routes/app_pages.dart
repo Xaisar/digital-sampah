@@ -56,12 +56,12 @@ class AppPages {
     ),
     GetPage(
       name: _Paths.HOME_PETUGAS,
-      page: () => const HomePetugasView(),
+      page: () => HomePetugasView(),
       binding: HomePetugasBinding(),
     ),
     GetPage(
       name: _Paths.LUPA_PASSWORD,
-      page: () => const LupaPasswordView(),
+      page: () => LupaPasswordView(),
       binding: LupaPasswordBinding(),
     ),
     GetPage(

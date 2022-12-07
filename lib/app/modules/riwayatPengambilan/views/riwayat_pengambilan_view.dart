@@ -9,12 +9,45 @@ class RiwayatPengambilanView extends GetView<RiwayatPengambilanController> {
   RiwayatPengambilanView({Key? key}) : super(key: key);
 
   List<Map<dynamic, dynamic>> item = [
-    {},
+    {
+      'nama': 'Sugi Puji Astuti',
+      'dawis': 'Dawis 004',
+      'tanggal': '3 Desember 2022'
+    },
+    {'nama': 'Danu', 'dawis': 'Dawis 004', 'tanggal': '3 Desember 2022'},
+    {
+      'nama': 'Siti Nur Halimah',
+      'dawis': 'Dawis 004',
+      'tanggal': '3 Desember 2022'
+    },
+    {
+      'nama': 'Budi Pratama',
+      'dawis': 'Dawis 004',
+      'tanggal': '3 Desember 2022'
+    },
+    {
+      'nama': 'Agara Dharma',
+      'dawis': 'Dawis 004',
+      'tanggal': '3 Desember 2022'
+    },
+    {'nama': 'Cahyono', 'dawis': 'Dawis 004', 'tanggal': '3 Desember 2022'},
+    {
+      'nama': 'Dimas Indra Kencana',
+      'dawis': 'Dawis 001',
+      'tanggal': '2 Desember 2022'
+    },
+    {
+      'nama': 'Muhammad Bilal Rhamadan',
+      'dawis': 'Dawis 001',
+      'tanggal': '2 Desember 2022'
+    },
+    {'nama': 'Hardiansyah', 'dawis': 'Dawis 001', 'tanggal': '2 Desember 2022'},
   ];
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+        backgroundColor: Colors.grey[300],
         appBar: AppBar(
           title: const Text('Riwayat Pengambilan'),
           backgroundColor: Color(0xFF1AD443),
@@ -23,70 +56,37 @@ class RiwayatPengambilanView extends GetView<RiwayatPengambilanController> {
             itemCount: item.length,
             itemBuilder: ((context, index) {
               return Container(
-                margin: EdgeInsets.all(10),
+                padding: EdgeInsets.symmetric(vertical: 5),
+                margin: EdgeInsets.symmetric(horizontal: 10, vertical: 8),
                 decoration: BoxDecoration(
                     color: Colors.white,
                     border: Border.all(color: Colors.grey),
-                    borderRadius: BorderRadius.all(Radius.circular(15))),
-                child: ElevatedButton(
-                  style: TextButton.styleFrom(
-                      backgroundColor: Colors.white,
-                      shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.all(Radius.circular(15)))),
-                  onPressed: (() {
-                    Get.to(DetailRiwayatView());
-                  }),
-                  child: Container(
-                    padding: EdgeInsets.all(10),
-                    child: Row(
-                      children: [
-                        Container(
-                          margin: EdgeInsets.only(right: 20),
-                          child: SizedBox(
-                            height: 65,
-                            width: 65,
-                            child: CircleAvatar(
-                              child: Image.asset(
-                                'assets/icons/money-bag.png',
-                              ),
-                            ),
-                          ),
-                        ),
-                        Container(
-                          child: Column(
-                            mainAxisAlignment: MainAxisAlignment.start,
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Container(
-                                margin: EdgeInsets.only(bottom: 5),
-                                child: Text('Sugi Puji Astuti',
-                                    style: TextStyle(
-                                        color: Colors.black,
-                                        fontSize: 18,
-                                        fontWeight: FontWeight.bold)),
-                              ),
-                              Container(
-                                margin: EdgeInsets.only(bottom: 5),
-                                child: Text(
-                                  'Dawis 004',
-                                  style: TextStyle(
-                                    color: Colors.black,
-                                  ),
-                                ),
-                              ),
-                              Container(
-                                margin: EdgeInsets.only(bottom: 5),
-                                child: Text('1 - 12 -2002',
-                                    style: TextStyle(
-                                      color: Colors.black,
-                                    )),
-                              )
-                            ],
-                          ),
-                        )
-                      ],
+                    borderRadius: BorderRadius.all(Radius.circular(10))),
+                child: ListTile(
+                  leading: SizedBox(
+                    height: 65,
+                    width: 65,
+                    child: CircleAvatar(
+                      child: Image.asset(
+                        'assets/icons/money-bag.png',
+                      ),
                     ),
                   ),
+                  title: Text(item[index]['nama'],
+                      style: TextStyle(
+                          color: Colors.black,
+                          fontSize: 18,
+                          fontWeight: FontWeight.bold)),
+                  subtitle: Text(
+                    item[index]['dawis'] + "\n" + item[index]['tanggal'],
+                    style: TextStyle(
+                      color: Colors.black,
+                    ),
+                  ),
+                  selected: true,
+                  onTap: () {
+                    Get.to(DetailRiwayatView());
+                  },
                 ),
               );
             })));

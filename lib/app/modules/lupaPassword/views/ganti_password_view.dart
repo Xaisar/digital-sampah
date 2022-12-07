@@ -1,12 +1,11 @@
-import 'package:digital_sampah/app/models/controller/hidepassword_controller.dart';
+import 'package:digital_sampah/app/modules/lupaPassword/controllers/gantipassword_controller.dart';
 import 'package:digital_sampah/widgets/succeschangepassword.dart';
 import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
 
-class GantiPasswordView extends GetView {
-  final password1 = Get.put(HidePasswordController2());
-  final password2 = Get.put(HidePasswordController3());
+class GantiPasswordView extends GetView<GantipasswordController> {
+  final passwordC = GantipasswordController();
 
   @override
   Widget build(BuildContext context) {
@@ -21,15 +20,6 @@ class GantiPasswordView extends GetView {
               fit: BoxFit.fill,
             ),
             AppBar(
-              // leading: ElevatedButton(
-              //     style: TextButton.styleFrom(
-              //       backgroundColor: Colors.transparent,
-              //     ),
-              //     onPressed: () => Get.,
-              //     child: Icon(
-              //       Icons.arrow_circle_left_outlined,
-              //       color: Colors.black,
-              //     )),
               backgroundColor: Colors.transparent,
               elevation: 0.0,
             ),
@@ -138,22 +128,22 @@ class GantiPasswordView extends GetView {
               borderRadius: BorderRadius.all(Radius.circular(20)),
             ),
             child: Obx(() => TextField(
-                  obscureText: password1.password.passwordverify.value,
+                  obscureText: passwordC.passwordverify1.value,
                   autofocus: false,
-                  keyboardType: TextInputType.text,
+                  keyboardType: TextInputType.visiblePassword,
                   decoration: InputDecoration(
                       border: OutlineInputBorder(
                           borderRadius: BorderRadius.all(Radius.circular(20))),
                       hintText: 'Input Password Baru',
                       suffixIcon: GestureDetector(
                           onTap: () {
-                            password1.togglePasswordVisibility2();
+                            passwordC.togglePasswordVisibility1();
                           },
                           child: Icon(
-                            password1.password.passwordverify.value
+                            passwordC.passwordverify1.value
                                 ? Icons.visibility_off
                                 : Icons.visibility,
-                            color: password1.password.passwordverify.value
+                            color: passwordC.passwordverify1.value
                                 ? Colors.grey
                                 : Colors.blue,
                           ))),
@@ -188,9 +178,9 @@ class GantiPasswordView extends GetView {
                 borderRadius: BorderRadius.all(Radius.circular(20)),
               ),
               child: Obx(() => TextField(
-                    obscureText: password2.password.passwordverify.value,
+                    obscureText: passwordC.passwordverify2.value,
                     autofocus: false,
-                    keyboardType: TextInputType.text,
+                    keyboardType: TextInputType.visiblePassword,
                     decoration: InputDecoration(
                         border: OutlineInputBorder(
                             borderRadius:
@@ -198,13 +188,13 @@ class GantiPasswordView extends GetView {
                         hintText: 'Confirm Password',
                         suffixIcon: GestureDetector(
                             onTap: () {
-                              password2.togglePasswordVisibility3();
+                              passwordC.togglePasswordVisibility2();
                             },
                             child: Icon(
-                              password2.password.passwordverify.value
+                              passwordC.passwordverify2.value
                                   ? Icons.visibility_off
                                   : Icons.visibility,
-                              color: password2.password.passwordverify.value
+                              color: passwordC.passwordverify2.value
                                   ? Colors.grey
                                   : Colors.blue,
                             ))),

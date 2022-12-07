@@ -1,7 +1,9 @@
+import 'package:digital_sampah/app/data/models/petugas_model.dart';
 import 'package:get/get.dart';
 
 class HomePetugasController extends GetxController {
-  final count = 0.obs;
+  var petugas = Petugas();
+
   @override
   void onInit() {
     super.onInit();
@@ -16,6 +18,4 @@ class HomePetugasController extends GetxController {
   void onClose() {
     super.onClose();
   }
-
-  void increment() => count.value++;
 }

@@ -10,14 +10,8 @@ class DetailRiwayatView extends GetView {
     {'Nama': 'Plastik', 'harga': 5000, 'berat': 9.2},
     {'Nama': 'Kaleng', 'harga': 8000, 'berat': 1.3},
     {'Nama': 'Besi', 'harga': 9000, 'berat': 8.6},
-    {'Nama': 'Kertas', 'harga': 1000, 'berat': 8.9},
-    {'Nama': 'Botol', 'harga': 2000, 'berat': 2.5},
-    {'Nama': 'Plastik', 'harga': 5000, 'berat': 9.2},
-    {'Nama': 'Kaleng', 'harga': 8000, 'berat': 1.3},
-    {'Nama': 'Besi', 'harga': 9000, 'berat': 8.6},
-    {'Nama': 'Kertas', 'harga': 1000, 'berat': 8.9},
   ];
-
+  num subTotal = 50000;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -59,23 +53,23 @@ class DetailRiwayatView extends GetView {
                     children: [
                       Padding(
                           padding: EdgeInsets.only(bottom: 8),
-                          child: Text("No. Nasabah : ",
+                          child: Text("No. Nasabah : 012",
                               style: TextStyle(fontSize: 16))),
                       Padding(
                           padding: EdgeInsets.only(bottom: 8),
-                          child:
-                              Text("Nama : ", style: TextStyle(fontSize: 16))),
-                      Padding(
-                          padding: EdgeInsets.only(bottom: 8),
-                          child:
-                              Text("Dawis : ", style: TextStyle(fontSize: 16))),
-                      Padding(
-                          padding: EdgeInsets.only(bottom: 8),
-                          child: Text("Petugas : ",
+                          child: Text("Nama : Sugi Puji Astuti",
                               style: TextStyle(fontSize: 16))),
                       Padding(
                           padding: EdgeInsets.only(bottom: 8),
-                          child: Text("Tanggal : ",
+                          child: Text("Dawis : Dawis 004",
+                              style: TextStyle(fontSize: 16))),
+                      Padding(
+                          padding: EdgeInsets.only(bottom: 8),
+                          child: Text("Petugas : Hendra",
+                              style: TextStyle(fontSize: 16))),
+                      Padding(
+                          padding: EdgeInsets.only(bottom: 8),
+                          child: Text("Tanggal : 3 Desember 2022",
                               style: TextStyle(fontSize: 16))),
                     ],
                   ),
@@ -98,56 +92,64 @@ class DetailRiwayatView extends GetView {
                     style: TextStyle(color: Colors.black, fontSize: 20),
                   ),
                 ),
-                Container(
-                  margin: EdgeInsets.only(bottom: 10),
-                  child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Text('Sampah', style: TextStyle(fontSize: 16)),
-                        Text('Total', style: TextStyle(fontSize: 16))
-                      ]),
-                ),
                 Flexible(
                   fit: FlexFit.tight,
                   child: ListView.builder(
                       itemCount: sampah.length,
                       itemBuilder: ((context, index) {
-                        return Container(
-                          child: Column(
-                            mainAxisAlignment: MainAxisAlignment.start,
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Container(
-                                alignment: Alignment.topLeft,
-                                margin: EdgeInsets.only(bottom: 5),
-                                child: Text(sampah[index]['Nama']),
+                        return Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            ListTile(
+                              title: Text(sampah[index]['Nama'],
+                                  style: TextStyle(fontSize: 18)),
+                              subtitle: Text(
+                                  sampah[index]['harga'].toString() +
+                                      " X " +
+                                      sampah[index]['berat'].toString(),
+                                  style: TextStyle(fontSize: 14)),
+                              trailing: Text(
+                                "Rp. " +
+                                    (sampah[index]['harga'] *
+                                            sampah[index]['berat'])
+                                        .toString(),
+                                style: TextStyle(fontSize: 16),
                               ),
-                              Row(
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceBetween,
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Container(
-                                    margin:
-                                        EdgeInsets.only(left: 10, bottom: 8),
-                                    alignment: Alignment.topLeft,
-                                    child: Text(
-                                        sampah[index]['harga'].toString() +
-                                            " x " +
-                                            sampah[index]['berat'].toString() +
-                                            " ="),
-                                  ),
-                                  Container(
-                                    alignment: Alignment.topRight,
-                                    child: Text("Rp. " +
-                                        ((sampah[index]['harga'] *
-                                                sampah[index]['berat']))
-                                            .toString()),
+                            ),
+                            (index + 1 == sampah.length
+                                ? Column(
+                                    children: [
+                                      Row(
+                                        children: [
+                                          Flexible(
+                                            child: Container(
+                                              color: Colors.grey,
+                                              height: 2,
+                                              width: Get.width,
+                                            ),
+                                          ),
+                                          Padding(
+                                            padding: const EdgeInsets.symmetric(
+                                                horizontal: 5),
+                                            child: Text(
+                                              "+",
+                                              style: TextStyle(fontSize: 20),
+                                            ),
+                                          )
+                                        ],
+                                      ),
+                                      ListTile(
+                                        title: Text("Total =",
+                                            style: TextStyle(fontSize: 18)),
+                                        trailing: Text(
+                                          "Rp. " + subTotal.toString(),
+                                          style: TextStyle(fontSize: 16),
+                                        ),
+                                      )
+                                    ],
                                   )
-                                ],
-                              )
-                            ],
-                          ),
+                                : SizedBox())
+                          ],
                         );
                       })),
                 ),
