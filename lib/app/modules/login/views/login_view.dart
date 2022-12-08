@@ -141,7 +141,7 @@ class LoginView extends GetView<LoginController> {
               ),
               child: TextField(
                 controller: loginC.usernameC,
-                keyboardType: TextInputType.name,
+                keyboardType: TextInputType.number,
                 onChanged: (inputUsername) {
                   loginC.inputUsername(inputUsername);
                 },
