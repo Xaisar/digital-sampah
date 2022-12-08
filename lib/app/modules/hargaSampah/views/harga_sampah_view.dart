@@ -6,28 +6,9 @@ import '../controllers/harga_sampah_controller.dart';
 
 class HargaSampahView extends GetView<HargaSampahController> {
   final List<Map<String, dynamic>> myList = [
-    {"Name": "Kardus", "Satuan": "Kg", "Harga": "3.000"},
-    {"Name": "Aqua Gelas", "Satuan": "Kg", "Harga": "4.000"},
-    {"Name": "Ale-Ale Dll", "Satuan": "Kg", "Harga": "3.000"},
-    {"Name": "Botol Plastik", "Satuan": "Kg", "Harga": "2.000"},
-    {"Name": "Ale-Ale Botol Plastik", "Satuan": "Kg", "Harga": "2.500"},
-    {"Name": "Emberan/Plastik Ringan", "Satuan": "Kg", "Harga": "2.200"},
-    {"Name": "Kertas HVS", "Satuan": "Kg", "Harga": "1.500"},
-    {"Name": "Kertas Buram", "Satuan": "Kg", "Harga": "700"},
-    {"Name": "Koran Bekas", "Satuan": "Kg", "Harga": "2.500"},
-    {"Name": "Plastik", "Satuan": "Kg", "Harga": "50"},
-    {"Name": "Kresek", "Satuan": "Kg", "Harga": "200"},
-    {"Name": "Besi", "Satuan": "Kg", "Harga": "3.000"},
-    {"Name": "Tembaga", "Satuan": "Kg", "Harga": "70.000"},
-    {"Name": "Alumunium", "Satuan": "Kg", "Harga": "8.000"},
-    {"Name": "Kaleng", "Satuan": "Kg", "Harga": "1.000"},
-    {"Name": "Plastik Keras", "Satuan": "Kg", "Harga": "300"},
-    {"Name": "Botol Kecap, Saos, Marjan", "Satuan": "Kg", "Harga": "300"},
-    {"Name": "Aki", "Satuan": "Kg", "Harga": "6.500"},
-    {"Name": "Duplex", "Satuan": "Kg", "Harga": "500"},
-    {"Name": "Oli", "Satuan": "Kg", "Harga": "500"},
-    {"Name": "Beling", "Satuan": "Kg", "Harga": "300"},
-    {"Name": "Botol Kaca", "Satuan": "Biji", "Harga": "300"},
+    {"Name": "Plastik", "Satuan": "Kg", "Harga": "2.000"},
+    {"Name": "Kertas", "Satuan": "Kg", "Harga": "2.500"},
+    {"Name": "Kaleng", "Satuan": "Kg", "Harga": "3.000"},
   ];
   @override
   Widget build(BuildContext context) {

@@ -5,13 +5,19 @@ import 'package:get/get.dart';
 class DetailRiwayatView extends GetView {
   DetailRiwayatView({Key? key}) : super(key: key);
 
-  List<Map<dynamic, dynamic>> sampah = [
-    {'Nama': 'Botol', 'harga': 2000, 'berat': 2.5},
-    {'Nama': 'Plastik', 'harga': 5000, 'berat': 9.2},
-    {'Nama': 'Kaleng', 'harga': 8000, 'berat': 1.3},
-    {'Nama': 'Besi', 'harga': 9000, 'berat': 8.6},
+  List<Map<dynamic, dynamic>> sampah1 = [
+    {'Nama': 'Plastik', 'harga': 2000, 'berat': 12},
+    {'Nama': 'Kertas', 'harga': 2500, 'berat': 2},
+    //
   ];
-  num subTotal = 50000;
+  List<Map<dynamic, dynamic>> sampah2 = [
+    //
+    {'Nama': 'Plastik', 'harga': 2000, 'berat': 2},
+    {'Nama': 'Kertas', 'harga': 5000, 'berat': 4},
+    {'Nama': 'Kaleng', 'harga': 8000, 'berat': 1},
+  ];
+  num subTotal1 = 32000;
+  num subTotal2 = 29000;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -51,25 +57,25 @@ class DetailRiwayatView extends GetView {
                     mainAxisAlignment: MainAxisAlignment.start,
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
+                      // Padding(
+                      //     padding: EdgeInsets.only(bottom: 8),
+                      //     child: Text("No. Nasabah : 012",
+                      //         style: TextStyle(fontSize: 16))),
                       Padding(
                           padding: EdgeInsets.only(bottom: 8),
-                          child: Text("No. Nasabah : 012",
+                          child: Text("Nama : Nada Celia Sinka Ines",
                               style: TextStyle(fontSize: 16))),
                       Padding(
                           padding: EdgeInsets.only(bottom: 8),
-                          child: Text("Nama : Sugi Puji Astuti",
+                          child: Text("Dawis : Dawis 001",
                               style: TextStyle(fontSize: 16))),
                       Padding(
                           padding: EdgeInsets.only(bottom: 8),
-                          child: Text("Dawis : Dawis 004",
+                          child: Text("Petugas : Jehan Khairul Anwar",
                               style: TextStyle(fontSize: 16))),
                       Padding(
                           padding: EdgeInsets.only(bottom: 8),
-                          child: Text("Petugas : Hendra",
-                              style: TextStyle(fontSize: 16))),
-                      Padding(
-                          padding: EdgeInsets.only(bottom: 8),
-                          child: Text("Tanggal : 3 Desember 2022",
+                          child: Text("Tanggal : 8 Desember 2022",
                               style: TextStyle(fontSize: 16))),
                     ],
                   ),
@@ -95,28 +101,46 @@ class DetailRiwayatView extends GetView {
                 Flexible(
                   fit: FlexFit.tight,
                   child: ListView.builder(
-                      itemCount: sampah.length,
+                      itemCount: (Get.arguments == '1'
+                          ? sampah1.length
+                          : sampah2.length),
                       itemBuilder: ((context, index) {
                         return Column(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                             ListTile(
-                              title: Text(sampah[index]['Nama'],
+                              title: Text(
+                                  Get.arguments == '1'
+                                      ? sampah1[index]['Nama']
+                                      : sampah2[index]['Nama'],
                                   style: TextStyle(fontSize: 18)),
                               subtitle: Text(
-                                  sampah[index]['harga'].toString() +
+                                  (Get.arguments == '1'
+                                              ? sampah1[index]['harga']
+                                              : sampah2[index]['harga'])
+                                          .toString() +
                                       " X " +
-                                      sampah[index]['berat'].toString(),
+                                      (Get.arguments == '1'
+                                              ? sampah1[index]['berat']
+                                              : sampah2[index]['berat'])
+                                          .toString(),
                                   style: TextStyle(fontSize: 14)),
                               trailing: Text(
                                 "Rp. " +
-                                    (sampah[index]['harga'] *
-                                            sampah[index]['berat'])
+                                    ((Get.arguments == '1'
+                                                ? sampah1[index]['harga']
+                                                : sampah2[index]['harga']) *
+                                            (Get.arguments == '1'
+                                                ? sampah1[index]['berat']
+                                                : sampah2[index]['berat']))
                                         .toString(),
                                 style: TextStyle(fontSize: 16),
                               ),
                             ),
-                            (index + 1 == sampah.length
+                            (index + 1 ==
+                                    (Get.arguments == '1'
+                                        ? sampah1.length
+                                        : sampah2.length)
                                 ? Column(
                                     children: [
                                       Row(
@@ -142,7 +166,11 @@ class DetailRiwayatView extends GetView {
                                         title: Text("Total =",
                                             style: TextStyle(fontSize: 18)),
                                         trailing: Text(
-                                          "Rp. " + subTotal.toString(),
+                                          "Rp. " +
+                                              (Get.arguments == '1'
+                                                      ? subTotal1
+                                                      : subTotal2)
+                                                  .toString(),
                                           style: TextStyle(fontSize: 16),
                                         ),
                                       )

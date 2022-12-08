@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class MyCards extends StatelessWidget {
-  final double balance;
+  final int balance;
   final String cardNumber;
   final String Dawis1;
   // final color;
@@ -24,9 +24,11 @@ class MyCards extends StatelessWidget {
         decoration: BoxDecoration(
           // color: color,
           gradient: LinearGradient(
-               colors: [
-                 Color(0xff1DBA3F),
-                 Color(0xff025113), ], ),
+            colors: [
+              Color(0xff1DBA3F),
+              Color(0xff025113),
+            ],
+          ),
           borderRadius: BorderRadius.circular(16),
         ),
         child: Column(

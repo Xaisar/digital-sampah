@@ -9,11 +9,12 @@ import '../controllers/pengambilan_controller.dart';
 class PengambilanView extends GetView<PengambilanController> {
   PengambilanView({Key? key}) : super(key: key);
   List<Map<String, dynamic>> dawis = [
-    {'id': '1', 'dawis': '001', 'nama': 'Dharma Wangsa Kencana', 'alamat': ''},
-    {'id': '2', 'dawis': '002', 'nama': 'Latifa', 'alamat': ''},
-    {'id': '3', 'dawis': '003', 'nama': 'Puji Astuti', 'alamat': ''},
-    {'id': '4', 'dawis': '004', 'nama': 'Andre Hermansyah', 'alamat': ''},
-    {'id': '5', 'dawis': '005', 'nama': 'Sudarsono', 'alamat': ''},
+    {
+      'id': '1',
+      'dawis': '001',
+      'nama': 'Rizal Andriansyah',
+      'alamat': 'Rogojampi'
+    },
   ];
 
   @override

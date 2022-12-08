@@ -57,14 +57,14 @@ class LoginController extends GetxController {
 
   loginRoute(context) {
     if (role == "Nasabah") {
-      if (user.username == "Nasabah" && user.password == "Nasabah") {
+      if (user.username == "085338474986" && user.password == "Nasabah") {
         user.password = null;
         Get.toNamed(Routes.HOME_PAGE, arguments: nasabah);
       } else {
         errorDialog(context);
       }
     } else if (role == "Petugas") {
-      if (user.username == "Petugas" && user.password == "Petugas") {
+      if (user.username == "081334967376" && user.password == "Petugas") {
         user.password = null;
         Get.toNamed(Routes.HOME_PETUGAS, arguments: petugas);
       } else {

@@ -11,17 +11,16 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 import '../../../routes/app_pages.dart';
+import '../controllers/home_page_controller.dart';
 
-class HomePage extends StatefulWidget {
-  const HomePage({super.key});
+class HomePage extends GetView<HomePageController> {
+  HomePage({super.key});
 
-  @override
-  State<HomePage> createState() => _HomePageState();
-}
-
-class _HomePageState extends State<HomePage> {
   //page controller
   final _controller = PageController();
+
+  final homeNasabahC = HomePageController();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -40,19 +39,19 @@ class _HomePageState extends State<HomePage> {
                 controller: _controller,
                 children: [
                   MyCards(
-                    balance: 258543,
+                    balance: homeNasabahC.isinasabah[0]['saldo'],
                     cardNumber: '007',
-                    Dawis1: "Dawis001",
+                    Dawis1: "Dawis" + homeNasabahC.isinasabah[0]['dawis'],
                     // color: Colors.deepPurple[300],
                   ),
                   MyCard(
                     // color1: Colors.green[400],
-                    Nama: "Mohamad Aji Hermansya",
+                    Nama: homeNasabahC.isinasabah[0]['nama'],
                     User: "",
-                    Ttl: "Banyuwangi, 23 Februari 2004",
-                    Alamat: "Dusun Tambong",
+                    Ttl: homeNasabahC.isinasabah[0]['tanggalLahir'],
+                    Alamat: homeNasabahC.isinasabah[0]['alamat'],
                     TitleHariPenjemputan: "Pengambilan Sampah Hari Juma't",
-                    TanggalJoin: "23/01/2010",
+                    TanggalJoin: homeNasabahC.isinasabah[0]['tanggalMasuk'],
                     iconUser: "assets/icons/logo.png",
                   ),
                 ],

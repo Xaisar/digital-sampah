@@ -1,3 +1,4 @@
+import 'package:digital_sampah/app/routes/app_pages.dart';
 import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
@@ -7,12 +8,12 @@ import 'package:get_cli/common/utils/json_serialize/json_ast/utils/grapheme_spli
 class DetailPengambilanView extends GetView {
   DetailPengambilanView({Key? key}) : super(key: key);
   List<Map<dynamic, dynamic>> sampah = [
-    {'Nama': 'Kertas', 'harga': 2500, 'berat': 2.5},
-    {'Nama': 'Alumunium', 'harga': 8000, 'berat': 4},
-    {'Nama': 'Besi', 'harga': 5000, 'berat': 1},
+    {'Nama': 'Plastik', 'harga': 2000, 'berat': 2},
+    {'Nama': 'Kertas', 'harga': 2500, 'berat': 4},
+    {'Nama': 'Kaleng', 'harga': 3000, 'berat': 1},
   ];
 
-  num subTotal = 40000;
+  num subTotal = 17000;
 
   @override
   Widget build(BuildContext context) {
@@ -53,13 +54,13 @@ class DetailPengambilanView extends GetView {
                     mainAxisAlignment: MainAxisAlignment.start,
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
+                      // Padding(
+                      //     padding: EdgeInsets.only(bottom: 10),
+                      //     child: Text("No. Nasabah : 005",
+                      //         style: TextStyle(fontSize: 16))),
                       Padding(
                           padding: EdgeInsets.only(bottom: 10),
-                          child: Text("No. Nasabah : 005",
-                              style: TextStyle(fontSize: 16))),
-                      Padding(
-                          padding: EdgeInsets.only(bottom: 10),
-                          child: Text("Nama : Samsudin",
+                          child: Text("Nama : Nada Celia Sinka Ines",
                               style: TextStyle(fontSize: 16))),
                       Padding(
                           padding: EdgeInsets.only(bottom: 10),
@@ -165,7 +166,9 @@ class DetailPengambilanView extends GetView {
                     child: ElevatedButton(
                         style: TextButton.styleFrom(
                             backgroundColor: Color(0xFF1AD443)),
-                        onPressed: () {},
+                        onPressed: () {
+                          Get.back();
+                        },
                         child: Text('Simpan')))
               ],
             )

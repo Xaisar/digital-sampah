@@ -37,11 +37,11 @@ class HomePetugasView extends GetView<HomePetugasController> {
                 children: [
                   MyCard(
                     // color1: Colors.green[400],
-                    Nama: "aku siapa",
+                    Nama: homePetugasC.isiPetugas[0]['nama'],
                     User: "",
-                    Ttl: "Banyuwangi, 23 April 2002",
-                    Alamat: "Dusun Tambong",
-                    TitleHariPenjemputan: "Pengangkut",
+                    Ttl: homePetugasC.isiPetugas[0]['tanggalLahir'],
+                    Alamat: homePetugasC.isiPetugas[0]['alamat'],
+                    TitleHariPenjemputan: homePetugasC.isiPetugas[0]['role'],
                     TanggalJoin: "Banyuwangi, Jawa Timur",
                     iconUser: "assets/icons/logo.png",
                   ),

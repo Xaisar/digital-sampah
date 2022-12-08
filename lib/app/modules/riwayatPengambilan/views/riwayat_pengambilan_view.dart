@@ -10,38 +10,17 @@ class RiwayatPengambilanView extends GetView<RiwayatPengambilanController> {
 
   List<Map<dynamic, dynamic>> item = [
     {
-      'nama': 'Sugi Puji Astuti',
-      'dawis': 'Dawis 004',
-      'tanggal': '3 Desember 2022'
-    },
-    {'nama': 'Danu', 'dawis': 'Dawis 004', 'tanggal': '3 Desember 2022'},
-    {
-      'nama': 'Siti Nur Halimah',
-      'dawis': 'Dawis 004',
-      'tanggal': '3 Desember 2022'
-    },
-    {
-      'nama': 'Budi Pratama',
-      'dawis': 'Dawis 004',
-      'tanggal': '3 Desember 2022'
-    },
-    {
-      'nama': 'Agara Dharma',
-      'dawis': 'Dawis 004',
-      'tanggal': '3 Desember 2022'
-    },
-    {'nama': 'Cahyono', 'dawis': 'Dawis 004', 'tanggal': '3 Desember 2022'},
-    {
-      'nama': 'Dimas Indra Kencana',
+      'id': '1',
+      'nama': 'Nada Celia Sinka Ines',
       'dawis': 'Dawis 001',
-      'tanggal': '2 Desember 2022'
+      'tanggal': '8 Desember 2022'
     },
     {
-      'nama': 'Muhammad Bilal Rhamadan',
+      'id': '2',
+      'nama': 'Nada Celia Sinka Ines',
       'dawis': 'Dawis 001',
-      'tanggal': '2 Desember 2022'
+      'tanggal': '8 Desember 2022'
     },
-    {'nama': 'Hardiansyah', 'dawis': 'Dawis 001', 'tanggal': '2 Desember 2022'},
   ];
 
   @override
@@ -85,7 +64,7 @@ class RiwayatPengambilanView extends GetView<RiwayatPengambilanController> {
                   ),
                   selected: true,
                   onTap: () {
-                    Get.to(DetailRiwayatView());
+                    Get.to(DetailRiwayatView(), arguments: item[index]['id']);
                   },
                 ),
               );

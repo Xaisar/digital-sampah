@@ -6,52 +6,13 @@ import 'package:get/get.dart';
 // ignore: must_be_immutable
 class FormPengambilanView extends GetView {
   List<Map<String, dynamic>> daftarSampah = [
-    {'Id': "1", 'Nama': "Botol", 'Harga': '1000', 'Satuan': "Biji"},
-    {'Id': "2", 'Nama': "Kertas", 'Harga': '2500', 'Satuan': "Kg"},
-    {'Id': "3", 'Nama': "Besi", 'Harga': '5000', 'Satuan': "Kg"},
-    {'Id': "4", 'Nama': "Alumunium", 'Harga': '8000', 'Satuan': "Kg"},
+    {"id": '1', "Nama": "Plastik", "Satuan": "Kg", "Harga": "2.000"},
+    {"id": '2', "Nama": "Kertas", "Satuan": "Kg", "Harga": "2.500"},
+    {"id": '3', "Nama": "Kaleng", "Satuan": "Kg", "Harga": "3.000"},
   ];
   List<Map<String, dynamic>> nasabah = [
-    {'Id': "1", 'NoNasabah': '7654726', 'Nama': "Paijo"},
-    {'Id': "2", 'NoNasabah': '8654632', 'Nama': "Samsudin"},
-    {'Id': "3", 'NoNasabah': '2213355', 'Nama': "Jokowi"},
-    {'Id': "4", 'NoNasabah': '2344456', 'Nama': "Joko"},
-    {'Id': "5", 'NoNasabah': '1223456', 'Nama': "Werdi"},
-    {'Id': "6", 'NoNasabah': '7654726', 'Nama': "Paijo"},
-    {'Id': "7", 'NoNasabah': '8654632', 'Nama': "Samsudin"},
-    {'Id': "8", 'NoNasabah': '2213355', 'Nama': "Jokowi"},
-    {'Id': "9", 'NoNasabah': '2344456', 'Nama': "Joko"},
-    {'Id': "10", 'NoNasabah': '1223456', 'Nama': "Werdi"},
-    {'Id': "11", 'NoNasabah': '7654726', 'Nama': "Paijo"},
-    {'Id': "12", 'NoNasabah': '8654632', 'Nama': "Samsudin"},
-    {'Id': "13", 'NoNasabah': '2213355', 'Nama': "Jokowi"},
-    {'Id': "14", 'NoNasabah': '2344456', 'Nama': "Joko"},
-    {'Id': "15", 'NoNasabah': '1223456', 'Nama': "Werdi"},
-    {'Id': "16", 'NoNasabah': '7654726', 'Nama': "Paijo"},
-    {'Id': "17", 'NoNasabah': '8654632', 'Nama': "Samsudin"},
-    {'Id': "18", 'NoNasabah': '2213355', 'Nama': "Jokowi"},
-    {'Id': "19", 'NoNasabah': '2344456', 'Nama': "Joko"},
-    {'Id': "20", 'NoNasabah': '1223456', 'Nama': "Werdi"},
-    {'Id': "21", 'NoNasabah': '7654726', 'Nama': "Paijo"},
-    {'Id': "22", 'NoNasabah': '8654632', 'Nama': "Samsudin"},
-    {'Id': "23", 'NoNasabah': '2213355', 'Nama': "Jokowi"},
-    {'Id': "24", 'NoNasabah': '2344456', 'Nama': "Joko"},
-    {'Id': "25", 'NoNasabah': '1223456', 'Nama': "Werdi"},
-    {'Id': "26", 'NoNasabah': '7654726', 'Nama': "Paijo"},
-    {'Id': "27", 'NoNasabah': '8654632', 'Nama': "Samsudin"},
-    {'Id': "28", 'NoNasabah': '2213355', 'Nama': "Jokowi"},
-    {'Id': "29", 'NoNasabah': '2344456', 'Nama': "Joko"},
-    {'Id': "30", 'NoNasabah': '1223456', 'Nama': "Werdi"},
-    {'Id': "31", 'NoNasabah': '7654726', 'Nama': "Paijo"},
-    {'Id': "32", 'NoNasabah': '8654632', 'Nama': "Samsudin"},
-    {'Id': "33", 'NoNasabah': '2213355', 'Nama': "Jokowi"},
-    {'Id': "34", 'NoNasabah': '2344456', 'Nama': "Joko"},
-    {'Id': "35", 'NoNasabah': '1223456', 'Nama': "Werdi"},
-    {'Id': "36", 'NoNasabah': '7654726', 'Nama': "Paijo"},
-    {'Id': "37", 'NoNasabah': '8654632', 'Nama': "Samsudin"},
-    {'Id': "38", 'NoNasabah': '2213355', 'Nama': "Jokowi"},
-    {'Id': "39", 'NoNasabah': '2344456', 'Nama': "Joko"},
-    {'Id': "40", 'NoNasabah': '1223456', 'Nama': "Werdi"},
+    {'Id': "1", 'NoNasabah': '7654726', 'Nama': "Nada Celia Sinka Ines"},
+    {'Id': "2", 'NoNasabah': '8654632', 'Nama': "Rizal Andriansyah"},
   ];
   List<Map<String, dynamic>> daftarPengambilanSampah = [
     {'Id': "", 'Nama': "", 'Berat': 0, 'satuan': ""}
@@ -60,17 +21,8 @@ class FormPengambilanView extends GetView {
   List<int> listidnasabah = [
     0,
     1,
-    2,
-    3,
-    4,
-    5,
-    6,
-    7,
-    8,
-    9,
-    10,
   ];
-  List<int> listidsampah = [0, 1, 2, 3];
+  List<int> listidsampah = [0, 1, 2];
 
   RxString nama = "".obs;
   RxString id = "".obs;
@@ -260,7 +212,7 @@ class FormPengambilanView extends GetView {
                                 ),
                               ],
                             ),
-                            value: daftarSampah[e]['Id']);
+                            value: daftarSampah[e]['id']);
                       }).toList(),
                       onChanged: (val) {
                         id.value = val.toString();
