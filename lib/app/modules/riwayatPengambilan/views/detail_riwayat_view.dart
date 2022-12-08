@@ -13,11 +13,11 @@ class DetailRiwayatView extends GetView {
   List<Map<dynamic, dynamic>> sampah2 = [
     //
     {'Nama': 'Plastik', 'harga': 2000, 'berat': 2},
-    {'Nama': 'Kertas', 'harga': 5000, 'berat': 4},
-    {'Nama': 'Kaleng', 'harga': 8000, 'berat': 1},
+    {'Nama': 'Kertas', 'harga': 2500, 'berat': 4},
+    {'Nama': 'Kaleng', 'harga': 3000, 'berat': 1},
   ];
-  num subTotal1 = 32000;
-  num subTotal2 = 29000;
+  num subTotal1 = 29000;
+  num subTotal2 = 17000;
   @override
   Widget build(BuildContext context) {
     return Scaffold(

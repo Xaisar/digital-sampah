@@ -245,7 +245,7 @@ class LoginView extends GetView<LoginController> {
 
   helpCenter(context, List<Map<String, dynamic>> listkontak) {
     return Container(
-        margin: EdgeInsets.only(bottom: 50),
+        margin: EdgeInsets.only(bottom: 30),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [

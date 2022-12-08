@@ -11,7 +11,7 @@ class HomePageController extends GetxController {
       'alamat': 'Rogojampi',
       'dawis': '001',
       'tanggalMasuk': '3 Mei 2021',
-      'saldo': 0
+      'saldo': 46000
     },
     {
       'id': '2',
